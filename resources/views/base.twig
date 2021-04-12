@@ -1,0 +1,2577 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Swensens1112.com :: Delivery Swensens </title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"><script
+            type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-d7e34c93c9832d9ca96",applicationID:"1233357383"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+        <meta name="robots" content="index, follow">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <meta name="apple-mobile-web-app-title" content="SWENSENS">
+        <link rel="apple-touch-icon" sizes="120x120" href="images/icon.ico">
+        <link rel="shortcut icon" sizes="48x48" href="images/icon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,
+            maximum-scale=1.0, user-scalable=no">
+        <meta name="theme-color" content="#0a0b0f">
+        <meta name="description" content="">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="หน้าแรก | SWENSENS">
+        <meta property="og:image" content="/assets/images/SW_OG_1980x1080.png">
+        <meta property="og:site_name" content="SWENSENS">
+        <script src="js/sweetalert.min.js"></script>
+        <script src="js/font-awesome.js"></script>
+        <link rel="manifest" href="https://www.swensens1112.com/manifest.json">
+        <link rel="stylesheet" href="dist/balloon.min.css%3Fv-1.css">
+        <style type="text/css">
+            html,
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            svg,
+            img {
+                width: 20px;
+            }
+            li.my-order {
+                display: none !important;
+            }
+        </style>
+        <style type="text/css" media="screen">
+             #privacy_policy_terms_and_conditions a {
+                color: red;
+            }
+            #privacy_policy_terms_and_conditions a::hover {
+                color: black;
+            }
+            .cc-banner .cc-message {
+                font-family: db_ozone,sans-serif;
+                font-size: 1.2em ;
+            }
+            a.cc-link {
+                display: none;
+            }
+            a.accept-cookie {
+                font-size: 1.2em ;
+                text-decoration: underline;
+                padding-left: 10px;
+            }
+            a.accept-cookie.cc-btn.cc-dismiss {
+                background-color: transparent;
+                color: white;
+                display: inline-table;
+            }
+            a.cc-btn {
+                font-size: 1.0em !important;
+                padding: 4px 0px 4px 0px;
+                background: #f3c75f;
+            }
+            .swiper-pagination-bullet {
+                opacity: 0.9;
+                background-color: #ffffff;
+            }
+            .swiper-pagination-bullet-active{
+                background-color: #3498db;
+            }
+            #header .account img {
+                padding-right: 8px;
+                padding-top: 2px;
+                padding-bottom: 5px;
+            }
+.clockicon_footer {
+    margin-right: 10px;
+    margin-top: 3px;
+    width: 24px;
+    height: 24px;
+}
+        </style>
+
+        <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="css/selectize.bootstrap3.css">
+
+        <script src="bootstrap/jquery.min.js"></script>
+        <script src="bootstrap/bootstrap.min.js"></script>
+        <script src="js/slick.js%3Fv=1618237711"></script>
+        <script src="js/selectize.min.js%3Fv=1618237711"></script>
+        <link rel="stylesheet" href="dist/common.a.css%3Fv=1618237711.css">
+        <link rel="stylesheet" href="dist/time-picker.css%3Fv=1618237711.css">
+        <link rel="stylesheet" href="css/style.css%3Fv=1618237711.css">
+        <link rel="stylesheet" href="css/slick-theme.css%3Fv=1618237711.css">
+        <link rel="stylesheet" href="css/slick.css%3Fv=1618237711.css">
+        <script src="datetimepicker/moment.min.js%3Fv=1618237711"></script>
+        <style type="text/css">
+            .notifications {
+                display: block;
+                position: fixed;
+                z-index: 5000
+            }
+            #header .lang-switcher a.active{
+                color: #e83b2d!important;
+                font-weight: 600;
+            }
+            .notification-wrapper {
+                display: block;
+                overflow: hidden;
+                width: 100%;
+                margin: 0;
+                padding: 0
+            }
+            .notification {
+                display: block;
+                box-sizing: border-box;
+                background: #fff;
+                text-align: left
+            }
+            .notification-title {
+                font-weight: 600
+            }
+            .vue-notification {
+                font-size: 12px;
+                padding: 10px;
+                margin: 0 5px 5px;
+                color: #fff;
+                background: #44a4fc;
+                border-left: 5px solid #187fe7
+            }
+            .vue-notification.warn {
+                background: #ffb648;
+                border-left-color: #f48a06
+            }
+            .vue-notification.error {
+                background: #e54d42;
+                border-left-color: #b82e24
+            }
+            .vue-notification.success {
+                background: #68cd86;
+                border-left-color: #42a85f
+            }
+            .vn-fade-enter-active,
+            .vn-fade-leave-active,
+            .vn-fade-move {
+                transition: all .5s
+            }
+            .vn-fade-enter,
+            .vn-fade-leave-to {
+                opacity: 0
+            }
+            @media (max-width: 479px) {
+                #header{
+                    height: 60px;
+                }
+                .nav-img{
+                    width: 120px;
+                }
+                #sidenav .sidenav-close {
+                    top: 3px;
+                    position: absolute;
+                    right: 23px;
+                    top: 47px;
+                }
+                .popup-content.log_form {
+                    margin: auto;
+                    width: 100%;
+                }
+
+                .followtext{
+                    padding-left: 42px;
+                    padding-right: 39px;
+                    padding-top: 14px;
+                }
+                .icon_tel{
+                    padding-left: 24px;
+                    margin-top: 10px;
+                }
+                .icon_mail{
+                    padding-left: 28px;
+                    margin-top: 10px;
+                }
+
+                .icon_facebook{
+                    padding-left: 46px;
+                    margin-top: 10px;
+                }
+                .icon_instagram{
+                    padding-left: 46px;
+                    margin-top: 10px;
+                }
+                .icon_youtube{
+                    padding-left: 47px;
+                    margin-top: 10px;
+                }
+                .timeopen{
+                    margin-left: -25px;
+                    margin-right: -12px;
+                }
+                .timeshop{
+                    margin-left: 29px;
+                }
+
+                .followtext{
+                    padding-left: 42px;
+                    padding-right: 39px;
+                    padding-top: 14px;
+                }
+
+                .copyrightresponsive{
+                    padding-bottom: 0px;
+                    padding-top: 111px;
+                }
+
+                .privacy{
+                    padding-top: 0px;
+                }*/
+            }
+            @media (min-width: 480px) and (max-width: 767px) {
+                #header{
+                    height: 60px;
+                }
+                #header .header-inner {
+                    height: 60px;
+                }
+                .nav-img{
+                    width: 120px;
+                }
+                .popup-content.log_form {
+                    margin: auto;
+                    width: 70%;
+                }
+                /* .icon_tel{
+                padding-left: 168px;
+            }
+                .icon_mail{
+                padding-left: 104px;
+            }
+
+                .icon_facebook{
+                padding-left: 251px;
+            }
+                .icon_instagram{
+                padding-left: 187px;
+            }
+                .icon_youtube{
+                padding-left: 122px;
+            }
+                .followtext{
+                margin-top: 21px;
+                padding-top: 31px;
+                padding-right: 118px;
+                padding-left: 167px;*/
+            }
+            }
+            @media (min-width: 768px) and (max-width: 991px) {
+                #header{
+                    height: 86px;
+                }
+                .popup-content.log_form {
+                    margin: auto;
+                    width: 70%;
+                }
+                .border_mobile{
+                    border-bottom: 2px solid #e70718;
+                }
+                /*.icon_tel{
+                padding-left: 70px;
+            }
+                .icon_mail{
+                padding-left: 50px;
+            }
+
+                .icon_facebook{
+                padding-left: 265px;
+            }
+                .icon_instagram{
+                padding-left: 264px;
+            }
+                .icon_youtube{
+                padding-left: 266px;
+            }*/
+            }
+            @media (min-width: 992px) and (max-width: 1199px) {
+                .popup-content.log_form {
+                    margin: auto;
+                    width: 70%;
+                }
+                .icon_tel{
+                    padding-left: 53px;
+                }
+                .icon_mail{
+                    padding-left: 50px;
+                }
+
+                .icon_facebook{
+                    padding-left: 73px;
+                }
+                .icon_instagram{
+                    padding-left: 69px;
+                }
+                .icon_youtube{
+                    padding-left: 66px;
+                }
+            }
+
+            @media (min-width: 360px) and (max-width: 640px) {
+
+                .icon_tel{
+                    margin-left: 12px;
+                }
+                .icon_mail{
+                    margin-left: 10px;
+                }
+
+                .icon_facebook{
+                    margin-left: 28px;
+                }
+                .icon_instagram{
+                    margin-left: 16px;
+                }
+                .icon_youtube{
+                    margin-left: 6px;
+                }
+            }
+
+            @media (min-width: 411px) and (max-width: 731px) {
+
+                .icon_tel{
+                    margin-left: 31px;
+                }
+                .icon_mail{
+                    margin-left: 21px;
+                }
+
+                .icon_facebook{
+                    margin-left: 54px;
+                }
+                .icon_instagram{
+                    margin-left: 35px;
+                }
+                .icon_youtube{
+                    margin-left: 17px;
+                }
+            }
+
+            @media (min-width: 1200px) {
+                #header{
+                    height: 119px;
+                }
+                .popup-content.log_form {
+                    margin: auto;
+                    width: 70%;
+                }
+            }
+
+            /*@media  sandy*/
+            @media (min-width: 320px) and (max-width: 480px) {
+
+                .followtext{
+                    padding-top: 35px;
+                }
+                .icon_tel{
+                    padding-left: 41px;
+                    margin-top: 14px;
+                }
+                .icon_mail{
+                    padding-left: 38px;
+                    margin-top: 14px;
+                }
+
+                .icon_facebook{
+                    padding-left: 77px;
+                    margin-top: 10px;
+                }
+                .icon_instagram{
+                    padding-left: 64px;
+                    margin-top: 10px;
+                }
+                .icon_youtube{
+                    padding-left: 52px;
+                    margin-top: 10px;
+                }
+            }
+
+            @media (min-width: 307px) and (max-width: 685px) {
+
+                .followtext{
+                    padding-top: 35px;
+                }
+                .icon_tel{
+                    padding-left: 36px;
+                    margin-top: 14px;
+                }
+                .icon_mail{
+                    padding-left: 33px;
+                    margin-top: 14px;
+                }
+
+                .icon_facebook{
+                    padding-left: 68px;
+                    margin-top: 10px;
+                }
+                .icon_instagram{
+                    padding-left: 58px;
+                    margin-top: 10px;
+                }
+                .icon_youtube{
+                    padding-left: 49px;
+                    margin-top: 10px;
+                }
+                .timeopen{
+
+                    margin-right: -3px;
+                }
+                .timeshop{
+                    margin-left: 17px;
+                }
+            }
+            @media (min-width: 340px) and (max-width: 685px) {
+                .icon_tel{
+                    padding-left: 48px;
+                    margin-top: 14px;
+                }
+            }
+
+            @media (min-width: 479px) {
+                .popup-content.log_form {
+                    margin: auto;
+                    width: 70%;
+                }
+
+
+            }
+
+            @media (min-width: 481px) and (max-width: 767px){
+
+                .followtext{
+                    margin-top: 51px;
+                    margin-right: 142px;
+                    margin-left: 143px;
+                }
+                .icon_tel{
+                    padding-left: 93px;
+                    margin-top: -12px;
+                }
+                .icon_mail{
+                    padding-left: 61px;
+                    margin-top: -12px;
+                }
+
+                .icon_facebook{
+                    padding-left: 146px;
+                    margin-top: -16px;
+                }
+                .icon_instagram{
+                    padding-left: 109px;
+                    margin-top: -16px;
+                }
+                .icon_youtube{
+                    padding-left: 74px;
+                    margin-top: -16px;
+                }
+            }
+
+            @media (min-width: 988px) and (max-width: 685px){
+
+                .icon_tel{
+                    padding-left: 93px;
+                    margin-top: -12px;
+                }
+                .icon_mail{
+                    padding-left: 61px;
+                    margin-top: -12px;
+                }
+
+                .icon_facebook{
+                    padding-left: 146px;
+                    margin-top: -16px;
+                }
+                .icon_instagram{
+                    padding-left: 109px;
+                    margin-top: -16px;
+                }
+                .icon_youtube{
+                    padding-left: 74px;
+                    margin-top: -16px;
+                }
+            }
+
+            @media (min-width: 768px) and (max-width: 1024px) {
+
+                .followtext{
+                    padding-top: 0px;
+                    padding-bottom: 24px;
+                }
+                .icon_tel{
+                    margin-left: -98px;
+                    padding-top: 15px;
+                }
+                .icon_mail{
+                    margin-left: -60px;
+                    padding-top: 15px;
+                }
+
+                .icon_facebook{
+                    margin-left: 15px;
+                    margin-top: -10px;
+                }
+                .icon_instagram{
+                    padding-left: 173px;
+                    margin-top: -10px;
+                }
+                .icon_youtube{
+                    margin-left: 111px;
+                    margin-top: -10px;
+                }
+            }
+
+            @media (min-width: 695px) {
+
+                .followtext {
+                    margin-top: 35px;
+                    margin-right: 257px;
+                    margin-left: 262px;
+                }
+                .icon_tel{
+                    padding-left: 166px;
+                    margin-top: -21px;
+                }
+                .icon_mail{
+                    padding-left: 106px;
+                    margin-top: -21px;
+                }
+
+                .icon_facebook{
+                    padding-left: 268px;
+                    margin-top: -17px;
+                }
+                .icon_instagram{
+                    margin-left: 86px;
+                    margin-top: -17px;
+                }
+                .icon_youtube{
+                    padding-left: 124px;
+                    margin-top: -18px;
+                }
+            }
+
+            @media (min-width: 585px) and (max-width: 685px) {
+
+                .followtext {
+                    padding-right: 11px;
+                    padding-left: 12px;
+                }
+                .icon_tel{
+                    padding-left: 166px;
+                    margin-top: -21px;
+                }
+                .icon_mail{
+                    padding-left: 106px;
+                    margin-top: -21px;
+                }
+
+                .icon_facebook{
+                    padding-left: 150px;
+                    margin-top: -17px;
+                }
+                .icon_instagram{
+                    margin-left: 34px;
+                    margin-top: -17px;
+                }
+                .icon_youtube{
+                    padding-left: 68px;
+                    margin-top: -18px;
+                }
+            }
+
+            @media (min-width: 720px) and (max-width: 785px) {
+
+                .followtext {
+                    padding-right: 11px;
+                    padding-left: 12px;
+                }
+                .icon_tel{
+                    padding-left: 137px;
+                    margin-top: -21px;
+                }
+                .icon_mail{
+                    padding-left: 83px;
+                    margin-top: -21px;
+                }
+
+                .icon_facebook{
+                    padding-left: 214px;
+                    margin-top: -17px;
+                }
+                .icon_instagram{
+                    margin-left: 81px;
+                    margin-top: -17px;
+                }
+                .icon_youtube{
+                    padding-left: 96px;
+                    margin-top: -18px;
+                }
+            }
+
+            @media (min-width: 484px) and (max-width: 685px) {
+
+                .followtext {
+                    margin-top: -27px;
+                    margin-right: 143px;
+                    margin-left: 145px;
+                }
+                .icon_tel{
+                    padding-left: 63px;
+                    margin-top: -21px;
+                }
+                .icon_mail{
+                    padding-left: 40px;
+                    margin-top: -21px;
+                }
+
+                .icon_facebook{
+                    margin-left: 7px;
+                }
+                .icon_instagram{
+                    padding-left: 78px;
+                }
+                .icon_youtube{
+                    margin-left: 0px;
+                }
+            }
+
+            @media (min-width: 540px) and (max-width: 685px) {
+
+                .followtext {
+                    margin-top: -27px;
+                    margin-right: 171px;
+                    margin-left: 172px;
+                }
+                .icon_tel{
+                    padding-left: 85px;
+                    margin-top: -21px;
+                }
+                .icon_mail{
+                    padding-left: 45px;
+                    margin-top: -21px;
+                }
+
+                .icon_facebook{
+                    margin-left: 35px;
+                }
+                .icon_instagram{
+                    padding-left: 97px;
+                }
+                .icon_youtube{
+                    margin-left: 10px;
+                }
+            }
+
+            @media (min-width: 486px) and (max-width: 685px) {
+
+                .followtext {
+                    margin-top: -27px;
+                    margin-right: 145px;
+                    margin-left: 151px;
+                }
+                .icon_tel{
+                    padding-left: 65px;
+                    margin-top: -21px;
+                }
+                .icon_mail{
+                    padding-left: 45px;
+                    margin-top: -21px;
+                }
+
+                .icon_facebook{
+                    margin-left: 13px;
+                }
+                .icon_instagram{
+                    padding-left: 86px;
+                }
+                .icon_youtube{
+                    margin-left: 10px;
+                }
+            }
+
+
+            @media (min-width: 503px) and (max-width: 685px) {
+
+                .followtext {
+                    margin-top: -27px;
+                    margin-right: 153px;
+                    margin-left: 157px;
+                }
+                .icon_tel{
+                    padding-left: 65px;
+                    margin-top: -21px;
+                }
+                .icon_mail{
+                    padding-left: 45px;
+                    margin-top: -21px;
+                }
+
+                .icon_facebook{
+                    margin-left: 13px;
+                }
+                .icon_instagram{
+                    padding-left: 86px;
+                }
+                .icon_youtube{
+                    margin-left: 10px;
+                }
+            }
+
+
+            @media (min-width: 511px) and (max-width: 685px) {
+
+                .followtext {
+                    margin-top: -27px;
+                    margin-right: 157px;
+                    margin-left: 163px;
+                }
+                .icon_tel{
+                    padding-left: 65px;
+                    margin-top: -21px;
+                }
+                .icon_mail{
+                    padding-left: 45px;
+                    margin-top: -21px;
+                }
+
+                .icon_facebook{
+                    margin-left: 13px;
+                }
+                .icon_instagram{
+                    padding-left: 86px;
+                }
+                .icon_youtube{
+                    margin-left: 10px;
+                }
+            }
+
+            @media (min-width: 508px) and (max-width: 685px) {
+
+                .followtext {
+                    margin-top: -27px;
+                    margin-right: 157px;
+                    margin-left: 163px;
+                }
+                .icon_tel{
+                    padding-left: 65px;
+                    margin-top: -21px;
+                }
+                .icon_mail{
+                    padding-left: 45px;
+                    margin-top: -21px;
+                }
+
+                .icon_facebook{
+                    margin-left: 13px;
+                }
+                .icon_instagram{
+                    padding-left: 86px;
+                }
+                .icon_youtube{
+                    margin-left: 10px;
+                }
+            }
+
+            @media (min-width: 541px) and (max-width: 685px) {
+
+                .followtext {
+                    margin-top: -27px;
+                    margin-right: 172px;
+                    margin-left: 172px;
+                }
+                .icon_tel{
+                    padding-left: 65px;
+                    margin-top: -21px;
+                }
+                .icon_mail{
+                    padding-left: 45px;
+                    margin-top: -21px;
+                }
+
+                .icon_facebook{
+                    margin-left: 13px;
+                }
+                .icon_instagram{
+                    padding-left: 86px;
+                }
+                .icon_youtube{
+                    margin-left: 10px;
+                }
+            }
+
+            @media (min-width: 572px) and (max-width: 685px) {
+
+                .followtext {
+                    margin-top: -27px;
+                    margin-right: 187px;
+                    margin-left: 188px;
+                }
+                .icon_tel{
+                    padding-left: 93px;
+                    margin-top: -21px;
+                }
+                .icon_mail{
+                    padding-left: 58px;
+                    margin-top: -21px;
+                }
+
+                .icon_facebook{
+                    margin-left: 53px;
+                }
+                .icon_instagram{
+                    padding-left: 112px;
+                }
+                .icon_youtube{
+                    margin-left: 21px;
+                }
+            }
+
+            @media (min-width: 608px) and (max-width: 685px) {
+
+                .followtext {
+                    margin-top: -27px;
+                    margin-right: 205px;
+                    margin-left: 203px;
+                }
+                .icon_tel{
+                    padding-left: 93px;
+                    margin-top: -21px;
+                }
+                .icon_mail{
+                    padding-left: 58px;
+                    margin-top: -21px;
+                }
+
+                .icon_facebook{
+                    margin-left: 53px;
+                }
+                .icon_instagram{
+                    padding-left: 112px;
+                }
+                .icon_youtube{
+                    margin-left: 21px;
+                }
+            }
+
+            @media (min-width: 632px) and (max-width: 685px) {
+
+                .followtext {
+                    margin-top: -27px;
+                    margin-right: 217px;
+                    margin-left: 218px;
+                }
+                .icon_tel{
+                    padding-left: 112px;
+                    margin-top: -21px;
+                }
+                .icon_mail{
+                    padding-left: 58px;
+                    margin-top: -21px;
+                }
+
+                .icon_facebook{
+                    margin-left: 80px;
+                }
+                .icon_instagram{
+                    padding-left: 125px;
+                }
+                .icon_youtube{
+                    margin-left: 21px;
+                }
+            }
+
+            @media (min-width: 660px) and (max-width: 685px) {
+
+                .followtext {
+                    margin-top: -27px;
+                    margin-right: 231px;
+                    margin-left: 229px;
+                }
+                .icon_tel{
+                    padding-left: 123px;
+                    margin-top: -21px;
+                }
+                .icon_mail{
+                    padding-left: 70px;
+                    margin-top: -21px;
+                }
+
+                .icon_facebook{
+                    margin-left: 88px;
+                }
+                .icon_instagram{
+                    padding-left: 134px;
+                }
+                .icon_youtube{
+                    margin-left: 30px;
+                }
+            }
+
+            @media (min-width: 614px) and (max-width: 685px) {
+
+                .followtext {
+                    margin-top: -27px;
+                    margin-right: 209px;
+                    margin-left: 212px;
+                }
+                .icon_tel{
+                    padding-left: 105px;
+                    margin-top: -21px;
+                }
+                .icon_mail{
+                    padding-left: 70px;
+                    margin-top: -21px;
+                }
+
+                .icon_facebook{
+                    margin-left: 73px;
+                }
+                .icon_instagram{
+                    padding-left: 126px;
+                }
+                .icon_youtube{
+                    margin-left: 30px;
+                }
+            }
+
+            @media (min-width: 579px) and (max-width: 685px) {
+
+                .followtext {
+                    margin-top: -27px;
+                    margin-right: 191px;
+                    margin-left: 192px;
+                }
+                .icon_tel{
+                    padding-left: 93px;
+                    margin-top: -21px;
+                }
+                .icon_mail{
+                    padding-left: 59px;
+                    margin-top: -21px;
+                }
+
+                .icon_facebook{
+                    margin-left: 55px;
+                }
+                .icon_instagram{
+                    padding-left: 113px;
+                }
+                .icon_youtube{
+                    margin-left: 23px;
+                }
+            }
+
+            @media (min-width: 618px) and (max-width: 685px) {
+
+                .followtext {
+                    margin-top: -27px;
+                    margin-right: 211px;
+                    margin-left: 209px;
+                }
+                .icon_tel{
+                    padding-left: 93px;
+                    margin-top: -21px;
+                }
+                .icon_mail{
+                    padding-left: 59px;
+                    margin-top: -21px;
+                }
+
+                .icon_facebook{
+                    margin-left: 55px;
+                }
+                .icon_instagram{
+                    padding-left: 113px;
+                }
+                .icon_youtube{
+                    margin-left: 23px;
+                }
+            }
+
+            @media (min-width: 641px) and (max-width: 685px) {
+
+                .followtext {
+                    margin-top: -27px;
+                    margin-right: 222px;
+                    margin-left: 221px;
+                }
+                .icon_tel{
+                    padding-left: 114px;
+                    margin-top: -21px;
+                }
+                .icon_mail{
+                    padding-left: 59px;
+                    margin-top: -21px;
+                }
+
+                .icon_facebook{
+                    margin-left: 82px;
+                }
+                .icon_instagram{
+                    padding-left: 128px;
+                }
+                .icon_youtube{
+                    margin-left: 23px;
+                }
+            }
+
+            @media (min-width: 664px) and (max-width: 685px) {
+
+                .followtext {
+                    margin-top: -27px;
+                    margin-right: 233px;
+                    margin-left: 230px;
+                }
+                .icon_tel{
+                    padding-left: 114px;
+                    margin-top: -21px;
+                }
+                .icon_mail{
+                    padding-left: 59px;
+                    margin-top: -21px;
+                }
+
+                .icon_facebook{
+                    margin-left: 82px;
+                }
+                .icon_instagram{
+                    padding-left: 128px;
+                }
+                .icon_youtube{
+                    margin-left: 23px;
+                }
+            }
+            @media (min-width: 676px) and (max-width: 685px) {
+
+                .followtext {
+                    margin-top: -27px;
+                    margin-right: 239px;
+                    margin-left: 235px;
+                }
+                .icon_tel{
+                    padding-left: 125px;
+                    margin-top: -21px;
+                }
+                .icon_mail{
+                    padding-left: 75px;
+                    margin-top: -21px;
+                }
+
+                .icon_facebook{
+                    margin-left: 92px;
+                }
+                .icon_instagram{
+                    padding-left: 132px;
+                }
+                .icon_youtube{
+                    margin-left: 23px;
+                }
+            }
+            @media (min-width: 801px) and (max-width: 907px) {
+
+                .followtext {
+                    margin-top: -6px;
+                    margin-right: 239px;
+                    margin-left: 235px;
+                }
+                .icon_tel{
+                    padding-left: 167px;
+                    margin-top: -29px;
+                }
+                .icon_mail{
+                    padding-left: 107px;
+                    margin-top: -30px;
+                }
+
+                .icon_facebook{
+                    margin-left: 17px;
+                    margin-top: -8px;
+                }
+                .icon_instagram{
+                    padding-left: 172px;
+                    margin-top: -8px;
+                }
+                .icon_youtube{
+                    margin-left: 107px;
+                    margin-top: -8px;
+                }
+            }
+
+            @media (min-width: 977px) and (max-width: 999px) {
+
+                .followtext {
+                    margin-top: -6px;
+                    margin-right: 239px;
+                    margin-left: 235px;
+                }
+                .icon_tel{
+                    padding-left: 167px;
+                    margin-top: -29px;
+                }
+                .icon_mail{
+                    padding-left: 107px;
+                    margin-top: -30px;
+                }
+
+                .icon_facebook{
+                    margin-left: 17px;
+                    margin-top: -8px;
+                }
+                .icon_instagram{
+                    padding-left: 172px;
+                    margin-top: -8px;
+                }
+                .icon_youtube{
+                    margin-left: 107px;
+                    margin-top: -8px;
+                }
+            }
+
+            @media (min-width: 768px) and (max-width: 1024px) {
+
+                .followtext {
+                    margin-top: -6px;
+                    margin-right: 239px;
+                    margin-left: 235px;
+                }
+                .icon_tel{
+                    padding-left: 167px;
+                    margin-top: -29px;
+                }
+                .icon_mail{
+                    padding-left: 107px;
+                    margin-top: -30px;
+                }
+
+                .icon_facebook{
+                    margin-left: 64px;
+                    margin-top: -8px;
+                }
+                .icon_instagram{
+                    padding-left: 172px;
+                    margin-top: -8px;
+                }
+                .icon_youtube{
+                    margin-left: 134px;
+                    margin-top: -10px;
+                }
+            }
+
+            @media (min-width: 480px) and (max-width: 520px) {
+
+                .followtext {
+                    margin-top: -18px;
+                    margin-right: 73px;
+                    margin-left: 72px;
+                }
+                .icon_tel{
+                    padding-left: 67px;
+                    margin-top: -23px;
+                }
+                .icon_mail{
+                    padding-left: 39px;
+                    margin-top: -23px;
+                }
+
+                .icon_facebook{
+                    margin-left: 64px;
+                    margin-top: -8px;
+                }
+                .icon_instagram{
+                    padding-left: 80px;
+                    margin-top: -8px;
+                }
+                .icon_youtube{
+                    margin-left: 49px;
+                    margin-top: -8px;
+                }
+            }
+
+
+
+
+            .input-group{
+                display: block;
+            }
+            .alert_login{
+                color:red;
+            }
+            .swal-text{
+                font-size: 1rem;
+                text-align: center;
+            }
+            .icon_footer{
+                height: 30px;
+                width: 30px
+            }
+            .icon_home{
+                height: 70px;
+                width: 70px
+            }
+            .height_name{
+                height: 2.5em;
+                overflow: hidden;
+            }
+            .modal-header{
+                border:none;
+            }
+            .close_button{
+                position: absolute;
+                top: 20px;
+                right: 10px;
+                font-size: 80px;
+                line-height: 0.65;
+                margin-left: 0;
+                color: #cb021b;
+            }
+            .submenu li{
+                text-align: left;
+            }
+            .sidenav-menu .submenu {
+                margin-left: 10px;
+            }
+            .submenu li .icon_footer{
+                margin-right: 15px
+            }
+            .button-close-sidenav{
+                position: absolute;
+                top: -67px;
+                right: -15px;
+            }
+
+
+            @media (max-width: 767px){
+                .nav-slide-logo img {
+                    width: 130px;
+                    height: auto;
+                }
+                .footer_menu{
+                    min-height: 32px;
+                    font-size: 19px;
+                }
+                .copyright_mobile{
+                    font-size: 11px!important;
+                    text-align: center;
+                }
+                .border_mobile{
+                    border-bottom: 2px solid #e70718;
+                }
+                #header .lang-switcher{
+                    display: inline-flex;
+                }
+                .font-xs{
+                    font-size:0.7rem!important;
+                }
+            }
+            .nav>li>a:focus, .nav>li>a:hover{
+                background-color:transparent;
+            }
+            .delivery-available{
+            }
+            .delivery_footer{
+                padding-right: 10px;
+            }
+            .right{
+                float: right;
+            }
+            .avatar_mobile{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: #efefef;
+                background-size: cover;
+                background-position: 50%;
+                overflow: hidden;
+                display: inline-block;
+                vertical-align: middle;
+                border: 1px solid #efefef;
+                transition: all .2s ease-out;
+            }
+            .black{
+                color:black!important;
+                margin-right: 5px;
+            }
+            .sign-out-footer{
+                right: 0;
+                position: absolute!important;
+            }
+
+            .swal-button {
+                color: #fff;
+                border: none;
+                box-shadow: none;
+                border-radius: 5px;
+                font-size: 24px;
+                padding: 4px 10px;
+            }
+            .swal-button:active {
+                background-color: #e20718;
+            }
+            .swal-button--catch{
+                text-align: center;
+                border-radius: 10px;
+                box-shadow: 2px 3px 9px #c2c2c2;
+                transition: all .2s ease-out;
+                background: #e70818;
+                color: white;
+                display: block;
+                border: 1px solid #e70818;
+            }
+            .swal-button--defeat{
+                text-align: center;
+                border-radius: 10px;
+                box-shadow: 2px 3px 9px #c2c2c2;
+                transition: all .2s ease-out;
+                background: white;
+                color: #e20718;
+                display: block;
+                border: 1px solid #e20718;
+            }
+            .swal-button--cancel{
+                color:#fff!important;
+            }
+
+            button{
+                border: 1px solid transparent;
+                border-radius: 10px;
+            }
+            .btn.focus, .btn:focus, .btn:hover{
+                color:black;
+            }
+            .sidenav-footer{
+                font-size: 24px
+            }
+            @media (max-width: 767px){
+                .center-xs{
+                    text-align: center;
+                }
+            }
+            #tab_search {
+                color: #000;
+                text-align: left;
+                position: absolute;
+                border-radius: 2px;
+                background-color: white;
+                overflow-y: scroll;
+                max-height: 465px;
+                z-index: 1024;
+                width: 100%;
+                box-shadow: 0 4px 3px 0 hsla(0, 0%, 72%, .6);
+                list-style: none;
+                padding: 0
+            }
+            li.list-item {
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 10px;
+            }
+            .list-item .list-item-img {
+                width: 200px;
+                margin-right: 20px;
+            }
+            .list-item .list-item-supertitle {
+                line-height: 18px;
+                margin-bottom: 0;
+            }
+            .list-item .list-item-content {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 8px;
+            }
+            .list-item-header {
+                width: 100%;
+                padding-left: 15px;
+                font-weight: 700;
+                color: #cecece;
+            }
+            .display{
+                display: none;
+            }
+            .position{
+                position: absolute;
+                z-index: 99;
+            }
+            .search{
+                z-index: 2;
+                width: 100%;
+                height: 40px;
+                margin-top: 0;
+                margin-left: 0;
+                font-size: 1em;
+                box-shadow: 2px 3px 19px #bcbcbc;
+                padding: 0 0 0 40px;
+            }
+            .delivery-available p{
+                position: relative;
+
+                top:-1px;
+            }
+            .icon_search{
+                z-index: 4;
+                width: 40px;
+                padding: 7px;
+                top: 0px;
+                position: absolute;
+
+            }
+            .card:hover{
+                background-color: #966600!important;
+            }
+            @media (max-width: 767px){
+                .search{
+                    margin-top: 0px;
+                    margin-bottom: 3px;
+                }
+                .icon_search{
+                    top: 0px;
+                }
+                .icon_search_mobile{
+                    z-index: 4;
+                    position: absolute;
+                    width: 40px;
+                    top: 67px;
+                    left: 10px;
+                    padding: 7px;
+                }
+                .input_search_mobile{
+                    width: 90%;
+                    padding: 0 0 0 33px;
+                    margin: auto;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+                #search{
+                    display: block!important;
+                }
+                .list-item .list-item-img {
+                    width: 85px;
+                    margin-right: 20px;
+                }
+                .position{
+                    position: relative;
+                    margin: 0 0 15px 0;
+                }
+                .display{
+                    display: block;
+                }
+                .register_header{
+                    padding-top: 52px;
+                }
+            }
+            .list-item-right{
+                width: 100%;
+            }
+            .activemain{
+                background-color:#ae210f;
+                width: 10%;
+            }
+            .activecard{
+                background-color: #966600;
+            }
+
+            .search_tab{
+                position: fixed;
+                width: 500px;
+                height: 200px;
+                margin: 5% auto; /* Will not center vertically and won't work in IE6/7. */
+                left: 0;
+                right: 0;
+            }
+
+            .box_noti{
+                cursor: pointer;
+                position: fixed;
+                transform: translateY(0%);
+                right: 57px;
+            }
+
+            .count_noti{
+                color: #fff;
+                font-weight: 700;
+                text-align: center;
+                letter-spacing: .025em;
+                border-radius: 50%;
+                background-color: #e83b2d;
+                position: absolute;
+                transition: all .2s ease-out;
+                width: 25px;
+                height: 25px;
+                line-height: 25px;
+                right: -12px;
+                bottom: -5px;
+                font-size: 0.8em;
+                cursor: pointer;
+            }
+
+            @media(min-width: 479px){
+                .count_noti{
+                    color: #fff;
+                    font-weight: 700;
+                    text-align: center;
+                    letter-spacing: .025em;
+                    border-radius: 50%;
+                    background-color: #e83b2d;
+                    position: absolute;
+                    transition: all .2s ease-out;
+                    width: 25px;
+                    height: 25px;
+                    line-height: 25px;
+                    right: -13px;
+                    bottom: -8px;
+                    font-size: 0.8em;
+                    cursor: pointer;
+                }
+            }
+            @media(min-width: 768px){
+                .count_noti{
+                    color: #fff;
+                    font-weight: 700;
+                    text-align: center;
+                    letter-spacing: .025em;
+                    border-radius: 50%;
+                    background-color: #e83b2d;
+                    position: absolute;
+                    transition: all .2s ease-out;
+                    width: 25px;
+                    height: 25px;
+                    line-height: 25px;
+                    right: 5px;
+                    bottom: -12px;
+                    font-size: 0.8em;
+                    cursor: pointer;
+                }
+            }
+            .list-group-item{
+                background-color: #b70513;
+                text-align: center!important;
+                border:none;
+                border-bottom: 2px solid #fff!important;
+            }
+            .dropbtn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .account_drop {
+                display: none;
+                top:110%!important;
+            }
+
+            .account_drop a {
+                color: #fff!important;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+            #header .account .account_drop{
+                font-family: blockberegular, db_heaventblack_cond;
+                text-align: center;
+                /* white-space: nowrap; */
+                min-width: 240px;
+                position: absolute;
+                top: 150%;
+                left: 60%;
+                transform: translateX(-50%);
+                box-shadow: 0 0 5px 0 rgba(0, 0, 0, .1);
+                background-color: #af0512;
+                border-radius: 4px;
+                z-index: 20;
+            }
+            
+            #header .account .account_drop .sign-out a:hover{
+                background-color: #f16a20!important;
+            }
+            .account_drop a:hover {background-color: #ddd;}
+
+            .dropdown:hover .account_drop {display: block;}
+
+            .dropdown:hover .dropbtn {background-color: #3e8e41;}
+            #header .account .account_drop li a{
+                text-align: center;
+                padding: 10px
+            }
+        </style>
+        <script type="text/javascript">
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId            : "426033250854731", 
+                    autoLogAppEvents : true,
+                    xfbml            : true,
+                    version          : 'v2.11'
+                });
+                FB.AppEvents.logPageView();
+                FB.getLoginStatus(function(response) {
+                    //console.log(response);
+                    //console.log(FB.getAccessToken());
+                    if (response.status === 'connected') {
+                        //console.log('Logged in.');
+                    }
+                    else {
+                        //console.log('getLoginStatus not login');
+                    }
+                });
+            };
+            (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+            function myFacebookLogin() {
+                if (FB.getAccessToken() != null) {
+                    FB.logout(function (response) {
+                        FB.login(function(response) {
+                            if (response.authResponse) {
+                                var access_token = FB.getAccessToken();
+                                var facebook_id = response.authResponse.userID;
+                                var facebook_email = '';
+                                var _token = $("input[name=_token]").val();
+                                //console.log('facebook_id ' + facebook_id);
+                                FB.api('/me?fields=id,name,email,picture', function(response) {
+                                    facebook_name = response.name ;
+                                    facebook_email = response.email ;
+                                    facebook_photo = response.picture ;
+                                    $.ajax({
+                                        type: "post",
+                                        datatype: 'json',
+                                        url: "https://www.swensens1112.com/api/login_facebook",
+                                        data: {
+                                            facebook_id: facebook_id,
+                                            name: facebook_name ,
+                                            email: facebook_email ,
+                                            picture: facebook_photo ,
+                                            access_token: access_token,
+                                            locale: 'th',
+                                            _token : _token
+                                        },
+                                        fail: function(response) {
+                                            //console.log("Facebook Login Fail : " + JSON.stringify(response));
+                                            //alert("Facebook Login Fail : " + JSON.stringify(response));
+                                        },
+                                        success: function(response){
+                                            if(response.result_code == 1){
+                                                                                                                                                swal("ยินดีต้อนรับสู่ Swensen’s")
+                                                    .then((value) => {
+                                                    //location.reload();
+                                                    window.location.href = 'https://www.swensens1112.com';
+                                                })
+                                                                                                                                            }else{
+                                                //console.log("Facebook Login Error : " + JSON.stringify(response));
+                                                //alert("Facebook Login Error : " + JSON.stringify(response));
+                                            }
+                                        },
+                                    })
+                                });
+                            }else{
+                                //console.log('User cancelled login or did not fully authorize.');
+                            }
+                        },
+                                 { scope: 'publish_actions,email'});
+                    });
+                }else{
+                    FB.login(function(response) {
+                        if (response.authResponse) {
+                            //console.log('Welcome!  Fetching your information.... ');
+                            var access_token = FB.getAccessToken();
+                            var facebook_id = response.authResponse.userID;
+                            var facebook_email = '';
+                            var _token = $("input[name=_token]").val();
+                            //console.log('facebook_id ' + facebook_id);
+                            FB.api('/me?fields=id,name,email,picture', function(response) {
+                                facebook_name = response.name ;
+                                facebook_email = response.email ;
+                                facebook_photo = response.picture ;
+                                $.ajax({
+                                    type: "post",
+                                    datatype: 'json',
+                                    url: "https://www.swensens1112.com/api/login_facebook",
+                                    data: {
+                                        facebook_id: facebook_id,
+                                        name: facebook_name ,
+                                        email: facebook_email ,
+                                        picture: facebook_photo ,
+                                        access_token: access_token,
+                                        locale: 'th',
+                                        _token : _token
+                                    },
+                                    fail: function(response) {
+                                        //console.log("Facebook Login Fail : " + JSON.stringify(response));
+                                        //alert("Facebook Login Fail : " + JSON.stringify(response));
+                                    },
+                                    success: function(response){
+                                        if(response.result_code == 1){
+                                            //console.log("Facebook Login Success : " + JSON.stringify(response));
+                                            //alert("Facebook Login Success : " + JSON.stringify(response));
+                                            //location.reload();
+                                                                                                                                    swal("ยินดีต้อนรับสู่ Swensen’s")
+                                                .then((value) => {
+                                                //location.reload();
+                                                window.location.href = 'https://www.swensens1112.com';
+                                            })
+                                                                                                                                }else{
+                                            //console.log("Facebook Login Error : " + JSON.stringify(response));
+                                            //alert("Facebook Login Error : " + JSON.stringify(response));
+                                        }
+                                    },
+                                })
+                            });
+                        }else{
+                            //console.log('User cancelled login or did not fully authorize.');
+                        }
+                    },
+                             { scope: 'publish_actions,email'});
+                }
+            }
+        </script>
+        <script language="JavaScript">
+            function chkNumber(ele)
+            {
+                var vchar = String.fromCharCode(event.keyCode);
+                if ((vchar<'0' || vchar>'9') && (vchar != '.')) return false;
+                ele.onKeyPress=vchar;
+            }
+            function isAlphanumeric(ele)
+            {
+                var regex = new RegExp("^[a-zA-Z0-9]+$");
+                var str = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+                if (regex.test(str)) {
+                    return true;
+                }
+
+                event.preventDefault();
+                return false;
+            }
+        </script>
+        <script type="text/javascript">
+            var msg_already = '';
+            var exist_already = '';
+            if(exist_already){
+                $( "#login_form" ).hide();
+                $( "#register" ).show();
+                $( '#error_email').show();
+            }
+            $('#password').keyup(function(){
+                var password = $('#password').val();
+                if(password.length < 6){
+                    $( '#error_password').show();
+                    return false;
+                }else{
+                    $( '#error_password').hide();
+                }
+            });
+            $('#form_register').submit(function(){
+                var password = $('#password').val();
+                if(password.length < 6){
+                    $( '#error_password').show();
+                    return false;
+                }
+            });
+
+            $(".button-close").click(function(){
+                $( ".popup-login" ).removeClass( "popup" );
+                $( ".popup-login" ).hide();
+                $( "#login_form" ).show();
+                $( "#register" ).hide();
+            });
+            $("#register_form").click(function(){
+                $( "#login_form" ).hide();
+                $( "#register" ).show();
+            });
+            $("#return_login").click(function(){
+                $( "#login_form" ).show();
+                $( "#register" ).hide();
+            });
+            
+            $('.my-account').hover( function () {
+                $("#my-account").show();
+            },
+                                   function () {
+                $("#my-account").hide();
+            }
+                                  );
+            $('.must_login').click(function(){
+                                $('h2').text("กรุณาเข้าสู่ระบบก่อนที่จะทำการสั่งซื้อ");
+                            });
+            $('#icon_search').click(function(){
+                $('#search').slideToggle();
+            });
+            $('#body').click(function() {
+                $('#text_search').val('');
+                $('#tab_search').hide();
+            });
+            $('#search').click(function(event){
+                event.stopPropagation();
+            });
+            
+        </script>
+        <link rel="stylesheet" href="css/cookieconsent.min.css">
+        <script src="js/cookieconsent.min.js"></script>
+        <script>
+            window.addEventListener("load", function(){
+                                window.cookieconsent.initialise({
+                    "palette": {
+                        "popup": {
+                            "background": "#000"
+                        },
+                        "button": {
+                            "background": "#f1d600"
+                        }
+                    },
+                    "position": "bottom",
+                    "content": {
+                        "message": 'สเวนเซ่นส์ใช้คุกกี้บนเว็บไซต์นี้ เพื่อใช้งานเว็บไซต์ต่อไปท่านได้ตกลงใช้งานคุกกี้ อ่านรายละเอียดเพิ่มเติมได้จาก <a aria-label="dismiss cookie message" role="button" href="https://www.swensens1112.com/th/privacy-policy" class="accept-cookie cc-btn cc-dismiss"> นโยบายความเป็นส่วนตัว </a>',
+                        "dismiss": "ตกลง",
+                    }
+                })
+                            });
+        </script>
+        <script> 
+            (function (w, d, s, l, i) { 
+                w[l] = w[l] || []; 
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'}); 
+                var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; 
+                j.async = true; 
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; 
+                f.parentNode.insertBefore(j, f); 
+            })(window, document, 'script', 'dataLayer', 'GTM-PCPHK5N'); 
+        </script>
+    </head>
+    <body id="body">
+        <noscript>
+            <iframe
+                src="../www.googletagmanager.com/ns.html%3Fid=GTM-PCPHK5N.html"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <div id="header">
+            <div class="header-inner is-fixed has-nav border_mobile" style="">
+                <div class="container-fluid header-padding">
+                    <div class="container">
+                        <div class="wrapper">
+                            <div class="header-l">
+                                <button type="button" class="menu-toggle"
+                                    data-toggle="collapse"
+                                    data-target=".navbar-collapse">
+                                    <span class="bar"></span>
+                                    <span class="bar"></span>
+                                    <span class="bar"></span>
+                                </button>
+                                <div class="lang-switcher hidden-xs">
+                                    <div class="toggle">
+                                        <a href="th.html#en">EN</a>
+                                    </div>
+                                    <ul class="list hidden-sm">
+                                        <li>
+                                            <a
+                                                href="https://www.swensens1112.com/th/brandsite"
+                                                class="red-button"
+                                                style="color:white; padding: 5px
+                                                15px 5px 15px; margin-right:
+                                                10px;" target="_blank">เรื่องราวของสเวนเซ่นส์</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="th.html" class="active">TH</a>
+                                        </li>
+                                        <li style="border-left: 1px solid
+                                            #828282;">
+                                            <a
+                                                href="https://www.swensens1112.com/en/"
+                                                class="">EN</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="logo">
+                                <a href="https://www.swensens1112.com/">
+                                    <img src="images/logo.png" class="nav-img">
+                                </a>
+                            </div>
+                            <div class="header-r">
+                                <div class="account hidden-sm">
+                                    <a
+                                        href="https://www.swensens1112.com/th/member/login"
+                                        id="login_" class="login-menu
+                                        top_margin"><img
+                                            src="brandsite/icon/iconregister.png"
+                                            class="icon_footer">เข้าสู่ระบบ</a>
+                                </div>
+                                <div class="bag hidden-xs" style="margin-right:
+                                    35px;">
+                                    <img src="brandsite/icon/searchicon1.png"
+                                        id="icon_search" class="icon_footer"
+                                        data-toggle="collapse"
+                                        data-parent="#accordion"
+                                        href="th.html#search" style="cursor:
+                                        pointer;">
+                                </div>
+                                <div class="bag visible-xs visible-sm bag-sm"
+                                    style="margin-right: 32px; margin-top:
+                                    2px;">
+                                    <a
+                                        href="https://www.swensens1112.com/th/member/login">
+                                        <img src="icon/SWS_icon01.png"
+                                            class="icon_footer" style="cursor:
+                                            pointer;">
+                                    </a>
+                                </div>
+                                <div id="bag" class="bag dropdown">
+                                    <a
+                                        href="https://www.swensens1112.com/th/cart"
+                                        class="must_login">
+                                        <img src="icon/iconbag1.png"
+                                            class="icon_footer">
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navigation">
+                        <ul class="nav" id="side-menu">
+                            <li class="">
+                                <a
+                                    href="https://www.swensens1112.com/th/product/cake"
+                                    class="" lang="th">ไอศกรีมเค้ก</a>
+                            </li>
+                            <li class="">
+                                <a
+                                    href="https://www.swensens1112.com/th/product/icecream"
+                                    class="" lang="th">ไอศกรีมควอท (450g.)</a>
+                            </li>
+                            <li class="">
+                                <a
+                                    href="https://www.swensens1112.com/th/product/ice-cream-pint"
+                                    class="" lang="th">ไอศกรีมมินิ ควอท (250g.)</a>
+                            </li>
+                            <li class="">
+                                <a
+                                    href="https://www.swensens1112.com/th/product/sundae-set"
+                                    class="" lang="th">ซันเด เซต</a>
+                            </li>
+                            <li class="">
+                                <a
+                                    href="https://www.swensens1112.com/th/product/scoop"
+                                    class="" lang="th">ไอศกรีมสกู๊ป</a>
+                            </li>
+                            <li class="">
+                                <a
+                                    href="https://www.swensens1112.com/th/product/Topping"
+                                    class="" lang="th">ท้อปปิ้ง</a>
+                            </li>
+                            <li class="">
+                                <a
+                                    href="https://www.swensens1112.com/th/product/icecream-bar"
+                                    class="" lang="th">ไอศกรีมบาร์</a>
+                            </li>
+                            <li class="">
+                                <a
+                                    href="https://www.swensens1112.com/th/product/Vouchers"
+                                    class="" lang="th">บัตรกำนัลเงินสด</a>
+                            </li>
+                            <li class="card"style="background-color: #b78009;
+                                padding-right: 7px;">
+                                <a
+                                    href="https://www.swensens1112.com/th/swensens-card"
+                                    lang="th"><img
+                                        src="icon/swensens_menu_member_card_40x40.png"
+                                        class="icon_nav">สมาชิกสเวนเซ่นส์การ์ด</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="sidenav" class="sidenav-short-height hidden-lg
+                        hidden-md" style="display: none;">
+                        <div class="sidenav-inner">
+                            <div class="sidenav-scoll">
+                                <div class="sidenav-header">
+                                    <div class="nav-slide-logo text-center">
+                                        <a href="https://www.swensens1112.com/"><img
+                                                src="images/logo.png" alt=""></a>
+                                    </div>
+                                    <div class="sidenav-close">
+                                        <button type="button"
+                                            class="button-close-sidenav"><span
+                                                class="color_red close_button">&times;</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="sidenav-body">
+                                    <ul class="sidenav-menu">
+                                        <ul class="submenu">
+                                            <li class="visible-xs">
+                                                <a
+                                                    href="https://www.swensens1112.com/th/mobile/search"
+                                                    class=""><img
+                                                        src="icon/swensens_menu_search.png"
+                                                        class="icon_footer">ค้นหา</a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="https://www.swensens1112.com/th/product/cake"
+                                                    class=""><img
+                                                        src="icon/swensens_menu_cake.png"
+                                                        class="icon_footer">ไอศกรีมเค้ก</a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="https://www.swensens1112.com/th/product/icecream"
+                                                    class=""><img
+                                                        src="icon/swensens_menu_quart.png"
+                                                        class="icon_footer">ไอศกรีมควอท
+                                                    (450g.)</a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="https://www.swensens1112.com/th/product/ice-cream-pint"
+                                                    class=""><img
+                                                        src="icon/swensens_menu_quart.png"
+                                                        class="icon_footer">ไอศกรีมมินิ
+                                                    ควอท (250g.)</a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="https://www.swensens1112.com/th/product/sundae-set"
+                                                    class=""><img
+                                                        src="icon/swensens_menu_takeaway.png"
+                                                        class="icon_footer">ซันเด
+                                                    เซต</a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="https://www.swensens1112.com/th/product/scoop"
+                                                    class=""><img
+                                                        src="icon/swensens_menu_scoop.png"
+                                                        class="icon_footer">ไอศกรีมสกู๊ป</a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="https://www.swensens1112.com/th/product/Topping"
+                                                    class=""><img
+                                                        src="icon/swensens_menu_topping.png"
+                                                        class="icon_footer">ท้อปปิ้ง</a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="https://www.swensens1112.com/th/product/icecream-bar"
+                                                    class=""><img
+                                                        src="icon/swensens_icecream_bar.png"
+                                                        class="icon_footer">ไอศกรีมบาร์</a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="https://www.swensens1112.com/th/product/Vouchers"
+                                                    class=""><img
+                                                        src="icon/swensens_menu_gift_voucher.png"
+                                                        class="icon_footer">บัตรกำนัลเงินสด</a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="https://www.swensens1112.com/th/swensens-card"
+                                                    class=""><img
+                                                        src="icon/swensens_menu_member_card.png"
+                                                        class="icon_footer">สมาชิกสเวนเซ่นส์การ์ด</a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="https://www.swensens1112.com/th/brandsite"
+                                                    class=""><img
+                                                        src="icon/swensens_menu_story.png"
+                                                        class="icon_footer">เรื่องราวของสเวนเซ่นส์</a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="https://www.swensens1112.com/th/about-us"
+                                                    class=""><img
+                                                        src="icon/swensens_menu_aboutus.png"
+                                                        class="icon_footer">เกี่ยวกับเรา</a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="https://www.swensens1112.com/th/brandsite/shop/search"
+                                                    class=""><img
+                                                        src="icon/swensens_menu_finder.png"
+                                                        class="icon_footer">ค้นหาร้านใกล้คุณ</a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="https://www.swensens1112.com/th/member/login"
+                                                    id="login_" class=""><img
+                                                        src="icon/swensens_menu_login.png"
+                                                        class="icon_footer">เข้าสู่ระบบ</a>
+                                            </li>
+                                        </ul>
+                                    </ul>
+                                </div>
+                                <div class="sidenav-footer">
+                                    <div class="lang-switcher">
+                                        <ul>
+                                            <li>
+                                                <a href="th.html" class="active">TH</a>
+                                            </li>
+                                            <li style="border-left: 1px solid
+                                                #828282;">
+                                                <a
+                                                    href="https://www.swensens1112.com/en/"
+                                                    class="">EN</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container hidden-xs">
+            <div class="row position" style="width: 100%;">
+                <div class="search_tab display" id="search">
+                    <form
+                        action="https://www.swensens1112.com/th/product/search"
+                        method="get">
+                        <input type="text" class="form-control search"
+                            id="text_search" name="search" placeholder="ค้นหาจาก
+                            ชื่อสินค้า, ประเภทสินค้า, อื่นๆ">
+                        <img src="icon/swensens_icon001.png" class="icon_search"class="icon_footer">
+                        <div class="" style="position: relative;">
+                            <ul id="tab_search">
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+            
+        {% block body %}
+
+        {% endblock %}
+
+
+
+        <div id="footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="footer-top-wrapper">
+                        <div class="credit-card">
+                            <ul>
+                                <li>
+                                    <img src="assets/images/visa.svg" alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/mastercard.svg"
+                                        alt="">
+                                </li>
+                                <li>
+                                    <img src="assets/images/jcb.svg" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12 section-contact-us">
+                                <div class="contact-us">
+                                    <div class="social-list hidden-xs
+                                        hidden-sm">
+                                        <ul>
+                                            <li class="list-heading">
+                                                <p class="heading contact">ติดต่อเรา</p>
+                                            </li>
+                                            <li class="tel">
+                                                <a href="tel:1112">
+                                                    <span>
+                                                        <img
+                                                            src="brandsite/images/call.png"
+                                                            class="icon_footer"><span
+                                                            class="heading">
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="tel" style="display:
+                                                none">
+                                                <a
+                                                    href="https://www.swensens1112.com/th/contactus">
+                                                    <span>
+                                                        <img
+                                                            src="images/icon_mail.png"
+                                                            class="icon_footer"><span
+                                                            class="heading">
+                                                        </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li class="list-heading">
+                                                <p class="heading">ติดตามเรา</p>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="https://www.facebook.com/weloveswensens/"
+                                                    target="_blank">
+                                                    <img
+                                                        src="brandsite/icon/facebook.png"
+                                                        class="icon_footer">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="https://www.instagram.com/we_love_swensens/"
+                                                    target="_blank">
+                                                    <img
+                                                        src="brandsite/icon/instragram.png"
+                                                        class="icon_footer">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="https://www.youtube.com/channel/UCZg-uMHcpiqr3z1qiJCurIQ/videos"
+                                                    target="_blank">
+                                                    <img
+                                                        src="brandsite/icon/youtube.png"
+                                                        class="icon_footer">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="line://ti/p/@qic0396o"
+                                                    target="_blank">
+                                                    <img
+                                                        src="brandsite/icon/footernew.png"
+                                                        class="icon_footer">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="social-list visible-xs
+                                        visible-sm col-sm-12">
+                                        <p class="heading text-center">ติดต่อเรา</p>
+                                        <div class="col-md-12 text-center">
+                                            <ul style="display: inline-block;">
+                                                <li>
+                                                    <a href="tel:1112">
+                                                        <img
+                                                            src="brandsite/images/call.png"
+                                                            class="icon_footer">
+                                                    </a>
+                                                </li>
+                                                <li style="display: none">
+                                                    <a
+                                                        href="https://www.swensens1112.com/th/contactus">
+                                                        <img
+                                                            src="images/icon_mail.png"
+                                                            class="icon_footer">
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="social-list visible-xs
+                                            visible-sm col-sm-12">
+                                            <div class="">
+                                                <p class="heading text-center">ติดตามเรา</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 text-center">
+                                            <ul style="display: inline-block;">
+                                                <li>
+                                                    <a
+                                                        href="https://www.facebook.com/weloveswensens/"
+                                                        target="_blank">
+                                                        <img
+                                                            src="brandsite/icon/facebook.png"
+                                                            class="icon_footer">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="https://www.instagram.com/we_love_swensens/"
+                                                        target="_blank">
+                                                        <img
+                                                            src="brandsite/icon/instragram.png"
+                                                            class="icon_footer">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="https://www.youtube.com/channel/UCZg-uMHcpiqr3z1qiJCurIQ/videos"
+                                                        target="_blank">
+                                                        <img
+                                                            src="brandsite/icon/youtube.png"
+                                                            class="icon_footer">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="line://ti/p/@qic0396o"
+                                                        target="_blank">
+                                                        <img
+                                                            src="brandsite/icon/footernew.png"
+                                                            class="icon_footer">
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="delivery-available hidden-xs
+                                    hidden-sm">
+                                    <img src="icon/swensens_menu2_cs6-33.png"
+                                        class="clockicon_footer">จัดส่งสินค้าเวลา
+                                    10:00 น. - 21:00
+                                    น.&nbsp;รับออเดอร์สุดท้ายเวลา 20:00 น.
+                                </div>
+                                <div class="delivery-available visible-xs
+                                    visible-sm col-xs-12 col-sm-12">
+                                    <div class="timeopen">
+                                        <img
+                                            src="icon/swensens_menu2_cs6-33.png"
+                                            class="icon_footer">
+                                        จัดส่งสินค้าเวลา 10:00 น. - 21:00 น.
+                                        <span class="timeshop" style="display:
+                                            block;">รับออเดอร์สุดท้ายเวลา 20:00
+                                            น.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 hidden-xs hidden-sm">
+                                <div class="footer-menu">
+                                    <ul>
+                                        <li>
+                                            <a
+                                                href="https://www.swensens1112.com/th/about-us"
+                                                class="">เกี่ยวกับเรา</a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="https://www.swensens1112.com/th/faq"
+                                                class="">คำถามที่พบบ่อย</a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="https://www.swensens1112.com/th/terms-and-conditions"
+                                                class="">ข้อตกลงและเงื่อนไข</a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="https://www.swensens1112.com/th/privacy-policy"
+                                                class="">นโยบายความเป็นส่วนตัว</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="copyright">
+                                    COPYRIGHT © 2018 SWENSEN'S THAILAND. ALL
+                                    RIGHTS RESERVED.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 visible-xs visible-sm">
+                            <div class="footer-menu footer_menu">
+                                <div class="col-xs-6 text-center">
+
+                                    <a
+                                        href="https://www.swensens1112.com/th/faq"
+                                        class="">คำถามที่พบบ่อย</a>
+                                </div>
+                                <div class="col-xs-6 text-center">
+
+                                    <a
+                                        href="https://www.swensens1112.com/th/terms-and-conditions"
+                                        class="">ข้อตกลงและเงื่อนไข</a>
+                                </div>
+                                <div class="col-xs-12 text-center">
+
+                                    <a
+                                        href="https://www.swensens1112.com/th/privacy-policy"
+                                        class="">นโยบายความเป็นส่วนตัว </a>
+                                </div>
+                            </div>
+                            <div class="copyright copyright_mobile">
+                                <div>
+                                    COPYRIGHT © 2018 SWENSEN'S THAILAND. ALL
+                                    RIGHTS RESERVED.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form id="logout-form" action="https://www.swensens1112.com/th/logout"
+            method="POST" style="display: none;">
+            <input type="hidden" name="_token"
+                value="IVSpRuAqZIFo5vtqU5h2X5wSM7ock4DqB3TtFIOv">
+        </form>
+        <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-d7e34c93c9832d9ca96","applicationID":"1233357383","transactionName":"YlZSN0ECW0IAAkxYDFsccQBHClpfTiBIQT99R0QTbyBaXxUTV10PUEFDP2A0ZVAGBHteDUFBXw9fBkdxCQ5VVA==","queueTime":0,"applicationTime":106,"atts":"ThFRQQkYSEw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+    <script type="text/javascript">
+        $('.goto_voucher').click(function(){
+            window.location.href = 'https://www.swensens1112.com/th/order/upcoming';
+        });
+        $('.goto_privilege').click(function(){
+            window.location.href = 'https://www.swensens1112.com/th/swensens-card#privilege';
+        });
+        $(".menu-toggle").click(function(){
+            $("#body").toggleClass("sidenav-overlay sidenav-opened");
+            $("#sidenav").toggle();
+        });
+        $(".button-close-sidenav").click(function(){
+            $("#body").toggleClass("sidenav-overlay sidenav-opened");
+            $("#sidenav").toggle();
+        });
+        $('#icon_search').click(function(){
+            $('#search').toggle();
+        });
+        $(".content-wrap").css("padding-bottom",$("#footer").height());
+        
+        /*$(".click-to-slide").click(function() {
+            $("#body").addClass("slide");
+        });
+        $(".close-slide").click(function() {
+            $("#body").removeClass("slide");
+        });*/
+        
+    </script>
+    <script type="text/javascript">
+            $('.my-order').hover(
+              function () {
+                $('.my-noti').show();
+              }, 
+              function () {
+                $('.my-noti').hide();
+              }
+            );
+            $('.my-order_mobile').hover(
+              function () {
+                $('.my-noti_mobile').show();
+              }, 
+              function () {
+                $('.my-noti_mobile').hide();
+              }
+            );
+        var success = '';
+        var already = '';
+        var isbirthdaycampaign = '';
+        if(already){
+            if (success == 1) {
+                if (isbirthdaycampaign) {
+                    swal({
+                        text: isbirthdaycampaign,
+                        buttons: {
+                            defeat: {
+                                text: "ตกลง",
+                                value : true
+                            },
+                        },
+                    }).then(function(value) {
+                        if (already) {
+                            if (success == 1) {
+                                swal({
+                                    text: "ยินดีต้อนรับสู่ Swensen’s                                         คุณได้ทำการลงทะเบียนบัตรสเวนเซ่นส์การ์ดสำเร็จแล้ว สามารถรับ ไอศกรีมฟรี 1 scoop",
+                                    buttons: {
+                                        catch: {
+                                            text: "ไว้ภายหลัง",
+                                            value: "no",
+                                        },
+                                        defeat: {
+                                            text: "รับเลย!",
+                                            value : "true"},
+                                        },
+                                }).then(function(value) {
+                                    if (value == "true") {
+                                        location.href = "https://www.swensens1112.com/th/swensens-card";
+                                    }
+                                });
+                            } else {
+                                swal({
+                                    text: "ยินดีต้อนรับสู่ Swensen’s",
+                                    buttons: "OK",
+                                });
+                            }
+                        }
+                    });
+                } else {
+
+                    swal({
+                        text: "ยินดีต้อนรับสู่ Swensen’s                                         คุณได้ทำการลงทะเบียนบัตรสเวนเซ่นส์การ์ดสำเร็จแล้ว สามารถรับ ไอศกรีมฟรี 1 scoop",
+                        buttons: {
+                            catch: {
+                                text: "ไว้ภายหลัง",
+                                value: "no",
+                            },
+                            defeat: {
+                                text: "รับเลย!",
+                                value : "true"},
+                            },
+                    }).then(function(value) {
+                        if (value == "true") {
+                            location.href = "https://www.swensens1112.com/th/swensens-card";
+                        } else {
+
+                        }
+                    });
+                }
+            } else {
+                swal({
+                    text: "ยินดีต้อนรับสู่ Swensen’s",
+                    buttons: "OK",
+                });
+            }
+            /*swal({
+          text: "ยินดีต้อนรับสู่ Swensen’s                                         คุณได้ทำการลงทะเบียนบัตรสเวนเซ่นส์การ์ดสำเร็จแล้ว สามารถรับ ไอศกรีมฟรี 1 scoop",
+          buttons: {
+    catch: {
+      text: "ไว้ภายหลัง",
+      value: "no",
+    
+    },
+    defeat: {
+text: "รับเลย!",
+
+        value : "true"},
+  },
+  })
+  .then(function(value) {
+          if (value == "true") {
+            location.href = "https://www.swensens1112.com/th/swensens-card";
+          }
+        });*/
+        }
+
+        $("#text_search").keyup(function(){
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+            if($("#text_search").val() == ""){
+                $("#tab_search").empty();
+            }else{
+                $.ajax({
+                    type: "get",
+                    url: "https://www.swensens1112.com/api/search/product",
+                    data: {search_name:$("#text_search").val()},
+                    cache: false,
+                    success: function(data){
+                        //console.log(data);
+                        $("#tab_search").empty();
+                        $("#tab_search").show();
+                        $('#tab_search').append('<div class="list-item-header" style="margin-bottom:10px">'+data.length+ ' Results</div>');
+                                                    $.each(data,function(index,product){
+                                $('#tab_search').append('<li class="list-item"><div class="hover-block"></div><div class="list-item-content"><a href="https://www.swensens1112.com/th/product/' + product.category_url + '/' + product.product_url + '"  style="color:black"><img src="../cms.swensens1112.com/image/product/'+product.id+'/'+product.product_image_1+'.html"" alt="'+product.product_name+'" title="'+product.product_name+'" class="list-item-img"><div class="list-item-right"><div class="list-item-supertitle">'+product.category_name+'</div><div class="list-item-title">'+product.product_name+'<span class="right">'+product.product_price+' บาท</span></div></a></div></div></li>');
+                            });
+                                            }
+                });
+            }
+        });
+    </script>
+</html>
