@@ -33,7 +33,7 @@ class RegisterController extends Controller
     {
         $verifyInfo = $request->all();
         $newInfo    = [];
-        $blacklist  = ["password", "confirm_password", "_token"];
+        $blacklist  = ['password', 'confirm_password', '_token'];
 
         foreach($verifyInfo as $i => $info){
             if(in_array($i, $blacklist, false)) {
