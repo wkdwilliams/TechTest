@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Redirect;
 
 class RegisterController extends Controller
 {
@@ -63,6 +64,8 @@ class RegisterController extends Controller
             'expiration_date'   => $request->get('expiration_day'),
             'address'           => $request->get('address'),
         ]);
+
+        return Redirect::to('/th/member/register/success');
     }
 
     /**
