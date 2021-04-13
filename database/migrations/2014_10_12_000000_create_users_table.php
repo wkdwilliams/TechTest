@@ -20,14 +20,10 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('mobile');
-            $table->string('birthday_day');
-            $table->string('birthday_month');
-            $table->string('birthday_year');
+            $table->string('DOB');
             $table->string('spacify');
             $table->string('member_card');
-            $table->string('expiration_day');
-            $table->string('expiration_month');
-            $table->string('expiration_year');
+            $table->string('expiration_date');
             $table->text('address');
             $table->timestamps();
         });

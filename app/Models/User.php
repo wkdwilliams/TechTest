@@ -12,6 +12,11 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
 
     /**
+     * @var string
+     */
+    protected $table = 'users';
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
@@ -22,14 +27,10 @@ class User extends Authenticatable
         'email',
         'password',
         'mobile',
-        'birthday_day',
-        'birthday_month',
-        'birthday_year',
+        'DOB',
         'spacify',
         'member_card',
-        'expiration_day',
-        'expiration_month',
-        'expiration_year',
+        'expiration_date',
         'address'
     ];
 

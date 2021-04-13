@@ -3,6 +3,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
 
@@ -47,6 +48,28 @@ class RegisterController extends Controller
             'verify_info' => $newInfo,
             'orig_info'   => $verifyInfo
         ]);
+    }
+
+    public function create(Request $request){
+        User::create([
+            'first_name'        => $request->get('name'),
+            'last_name'         => $request->get('last_name'),
+            'email'             => $request->get('email'),
+            'password'          => $request->get('password'),
+            'mobile'            => $request->get('mobile'),
+            'DOB'               => $request->get('DOB'),
+            'spacify'           => $request->get('special_spacify'),
+            'member_card'       => $request->get('member_card'),
+            'expiration_date'   => $request->get('expiration_day'),
+            'address'           => $request->get('address'),
+        ]);
+    }
+
+    /**
+     * @return View
+     */
+    public function success(): View{
+        return $this->render('register_step_success');
     }
 
 }
