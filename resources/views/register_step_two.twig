@@ -1,0 +1,40 @@
+{% extends "register.twig" %}
+
+{% block body %}
+    <div class="container">
+        <div style="color: red; text-align: center">ลงทะเบียนสมัครสมาชิกสเวนเซ่นส์</div>
+        <ul class="progressbar">
+            <li>ข้อมูลลูกค้า</li>
+            <li class="active">ที่อยู่ปัจจุบัน</li>
+            <li>ยืนยันข้อมูลทั้งหมด</li>
+        </ul>
+    </div>
+
+    <form method="post" action="/th/member/register/3">
+        <div id="register-form" style="margin-top: 110px;">
+
+        <div class="form-group">
+            <input type="text" class="input input-light" name="last_name" id="lname" placeholder="นามสกุล*" value="">
+        </div>
+
+        <input type='hidden' name='name' value='{{ name }}' />
+        <input type='hidden' name='last_name' value='{{ last_name }}' />
+        <input type='hidden' name='email' value='{{ email }}' />
+        <input type='hidden' name='password' value='{{ password }}' />
+        <input type='hidden' name='confirm_password' value='{{ confirm_password }}' />
+        <input type='hidden' name='mobile' value='{{ mobile }}' />
+        <input type='hidden' name='birthday_day' value='{{ birthday_day }}' />
+        <input type='hidden' name='birthday_month' value='{{ birthday_month }}' />
+        <input type='hidden' name='birthday_year' value='{{ birthday_year }}' />
+        <input type='hidden' name='special_spacify' value='{{ special_spacify }}' />
+        <input type='hidden' name='member_card' value='{{ member_card }}' />
+        <input type='hidden' name='day' value='{{ day }}' />
+        <input type='hidden' name='month' value='{{ month }}' />
+        <input type='hidden' name='year' value='{{ year }}' />
+
+        </div>
+
+    </form>
+
+    {{ csrf_field() }}
+{% endblock %}

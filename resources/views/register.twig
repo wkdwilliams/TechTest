@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <title>Swensens Register</title>
+
+    <link rel="stylesheet" href="/css/progress.css" />
+    <link rel="stylesheet" href="/css/register.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+
+        function check_password(input){
+            const errorMsg      = $('#passwordErrorMsg');
+            const PASSWORD_LEN  = $(input).val().length;
+
+            $(input).css("border", "1px solid red");
+
+            if(PASSWORD_LEN === 0){
+                $(errorMsg).html("กรุณากรอกรหัสผ่าน");
+                return;
+            }
+            if(PASSWORD_LEN < 6){
+                $(errorMsg).html("กรอกรหัสผ่านความยาว 6 ตัวอักษรขึ้นไป");
+                return;
+            }
+
+            $(input).css("border", "1px solid #e4e4e4");
+            $(errorMsg).html("");
+        }
+
+        function verify_password(input){
+            const errorMsg = $('#passwordVerifyErrorMsg');
+            const password = $('#register_password').val();
+
+            $(input).css("border", "1px solid red");
+
+            if($(input).val() != password){
+                $(errorMsg).html("รหัสผ่านไม่ตรงกัน");
+                return;
+            }
+
+            $(input).css("border", "1px solid #e4e4e4");
+            $(errorMsg).html("");
+        }
+
+        function validateEmail(email) {
+            const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
+
+        function check_email(input){
+            const errorMsg = $('#emailErrorMsg');
+            const email = $(input).val();
+
+            if(!validateEmail(email)){
+                $(errorMsg).html("กรุณากรอกอีเมลที่ถูกต้อง");
+                return;
+            }
+
+            $(input).css("border", "1px solid #e4e4e4");
+            $(errorMsg).html("");
+        }
+
+    </script>
+
+    <link rel="shortcut icon" sizes="48x48" href="/images/icon.ico">
+</head>
+
+<body>
+
+<div id="top-bar">
+    <button class="red-button">เรื่องราวของสเวนเซ่นส์</button>
+
+    <img alt="logo" src="/images/logo.png" id="logo" />
+
+    <span class="red-button-right">เข้าสู่ระบบ</span>
+</div>
+
+<!--
+    #############################################################
+    Start body content
+    #############################################################
+-->
+
+{% block body %}
+
+{% endblock %}
+
+<!--#####################################################
+End body content
+#########################################################-->
+
+</body>
+
+</html>

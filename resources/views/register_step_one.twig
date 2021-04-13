@@ -1,0 +1,136 @@
+{% extends "register.twig" %}
+
+{% block body %}
+
+<div class="container">
+    <div style="color: red; text-align: center">ลงทะเบียนสมัครสมาชิกสเวนเซ่นส์</div>
+    <ul class="progressbar">
+        <li class="active">ข้อมูลลูกค้า</li>
+        <li>ที่อยู่ปัจจุบัน</li>
+        <li>ยืนยันข้อมูลทั้งหมด</li>
+    </ul>
+</div>
+
+<form method="post" action="/th/member/register/2">
+
+    <div id="register-form" style="margin-top: 110px;">
+        <div class="form-group">
+            <label>ข้อมูลส่วนตัว*</label>
+            <input type="text" class="input input-light" name="name" id="name" placeholder="ชื่อ*" value="">
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="input input-light" name="last_name" id="lname" placeholder="นามสกุล*" value="">
+        </div>
+        <div class="form-group">
+            <span class="error font-xs" id="check_email" style="display: none">อีเมลนี้มีผู้ใช้งานแล้ว</span>
+            <span class="error font-xs" id="check_email_val" style="display: none">อีเมลไม่ตรงกัน กรุณากรอกใหม่อีกครั้ง</span>
+
+            <input type="email" class="input input-light" id="register_email" name="email" onkeyup="check_email(this);" placeholder="อีเมล*" value="">
+            <span id="emailErrorMsg" class="form-error-msg"></span>
+        </div>
+        <div class="form-group">
+            <input type="password" class="input input-light" id="register_password" name="password" placeholder="รหัสผ่าน*" onkeyup="check_password(this)" value="">
+            <span id="passwordErrorMsg" class="form-error-msg"></span>
+
+        </div>
+        <div class="form-group">
+            <input type="password" class="input input-light" id="confirm_password" name="confirm_password" placeholder="กรุณากรอกยืนยันรหัสผ่าน*" value="" onkeyup="verify_password(this)">
+            <span id="passwordVerifyErrorMsg" class="form-error-msg"></span>
+        </div>
+        <div class="form-group">
+            <input type="text" class="input input-light" name="mobile" id="register_mobile" OnKeyPress="return chkNumber(this)" placeholder="เบอร์โทรศัพท์มือถือ*" maxlength="10" value="">
+        </div>
+        <div class="form-group" style="text-align: center">
+            <label>วันเกิด*</label>
+            <select name="birthday_day" id="birthday_day" class="input" style="width: 31%">
+                <option value="">วัน</option>
+                {% for i in 1..31 %}
+                    {% if i < 10 %}
+                        <option value="0{{ i }}">0{{ i }}</option>
+                    {% else %}
+                        <option value="{{ i }}">{{ i }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+
+            <select name="birthday_month" id="birthday_month" class="input" style="width: 31%">
+                <option value="">เดือน</option>
+                {% for i in 1..12 %}
+                    {% if i < 10 %}
+                        <option value="0{{ i }}">0{{ i }}</option>
+                    {% else %}
+                        <option value="{{ i }}">{{ i }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+
+            <select name="birthday_year" id="birthday_year" class="input" style="width: 31%">
+                <option value="">ปี</option>
+                {% for i in 2561..2462 %}
+                    <option value="{{ i }}">{{ i }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label>วันพิเศษ (ไม่บังคับ)</label>
+            <input type="text" class="input input-light" name="special_spacify" id="special_spacify" OnKeyPress="" placeholder="เช่น วันครบรอบ, วันเกิดแฟน, วันเกิดลูก" value="">
+        </div>
+
+
+
+        <div class="form-group">
+            <label>หมายเลขบัตรสเวนเซ่นส์การ์ด</label>
+            <div class="error" id="member_error" style="display: none"></div>
+            <input type="text" class="input input-light" name="member_card" id="member_card" oninput="this.value = this.value.toUpperCase()" placeholder="เลขบัตรสเวนเซ่นส์การ์ด 13 หรือ 15 หลัก" OnKeyPress="return isAlphanumeric(this)" value="" maxlength="15">
+        </div>
+        <div class="form-group input-expiry" style="text-align: center">
+            <label>วันหมดอายุหลังบัตรสเวนเซ่นส์การ์ด</label>
+            <select name="day" id="day" class="input" style="width: 31%">
+                <option value="">วัน</option>
+                {% for i in 1..31 %}
+                    {% if i < 10 %}
+                        <option value="0{{ i }}">0{{ i }}</option>
+                    {% else %}
+                        <option value="{{ i }}">{{ i }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+
+            <select name="month" id="month" class="input" style="width: 31%">
+                <option value="">เดือน</option>
+                {% for i in 1..12 %}
+                    {% if i < 10 %}
+                        <option value="0{{ i }}">0{{ i }}</option>
+                    {% else %}
+                        <option value="{{ i }}">{{ i }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+
+            <select name="year" id="year" class="input" style="width: 31%">
+                <option value="">ปี</option>
+                {% for i in 2561..2462 %}
+                    <option value="{{ i }}">{{ i }}</option>
+                {% endfor %}
+            </select>
+
+        </div>
+
+        <div class="form-group" style="margin-top: 20px;">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" style="display: inline;" />
+            <span style="font-size: 15px; font-weight: bold; color: #828282">ฉันได้อ่านและยอมรับ <a target="_blank" href="/th/terms-and-conditions"> ข้อกำหนดการใช้งาน </a>และ<a target="_blank" href="/th/privacy-policy"> นโยบายความเป็นส่วนตัว </a>ของสเวนเซ่นส์</span>
+        </div>
+        <div class="form-group" style="margin-top: 20px;">
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" style="display: inline;" />
+            <span style="font-size: 15px; font-weight: bold; color: #828282">ฉันยินยอมรับข้อมูลข่าวสาร กิจกรรมส่งเสริมการขายต่างๆ จากสเวนเซ่นส์และ <a target="_blank" href="https://www.minor.com/th/affiliated-companies">บริษัทในเครือ</a> โดยเราจะเก็บข้อมูลของท่านไว้เป็นความลับ สามารถศึกษาเงื่อนไข/ข้อตกลง<a target="_blank" href="/th/privacy-policy"> นโยบายความเป็นส่วนตัว </a>เพิ่มเติมได้ที่เว็บไซต์ของบริษัทฯ</span>
+        </div>
+
+        <input type="submit" id="submit" class="next-button" value="ถัดไป" />
+
+
+    </div>
+    {{ csrf_field() }}
+</form>
+
+{% endblock %}
