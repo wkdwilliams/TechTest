@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return redirect('/th');
+});
+
+Route::get('/th', function () {
     return View::make('home');
 });
+
+Route::get('/th/member/login', function () {
+    return View::make('login');
+});
+
+Route::get('/th/member/register/1',  [RegisterController::class, 'stepOne']);
+Route::post('/th/member/register/2', [RegisterController::class, 'stepTwo']);
+Route::post('/th/member/register/3', [RegisterController::class, 'stepThree']);
