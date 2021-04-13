@@ -29,7 +29,6 @@ class CreateUsersTable extends Migration
             $table->string('expiration_month');
             $table->string('expiration_year');
             $table->text('address');
-            $table->text('verify_token');
             $table->timestamps();
         });
     }
