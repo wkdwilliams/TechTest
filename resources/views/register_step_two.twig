@@ -14,7 +14,7 @@
         <div id="register-form" style="margin-top: 110px;">
 
         <div class="form-group">
-            <input type="text" class="input input-light" name="last_name" id="lname" placeholder="นามสกุล*" value="">
+            <textarea class="input input-light" name="address" id="address" placeholder="ที่อยู่" style="height: 150px;"></textarea>
         </div>
 
         <input type='hidden' name='name' value='{{ name }}' />
@@ -23,18 +23,15 @@
         <input type='hidden' name='password' value='{{ password }}' />
         <input type='hidden' name='confirm_password' value='{{ confirm_password }}' />
         <input type='hidden' name='mobile' value='{{ mobile }}' />
-        <input type='hidden' name='birthday_day' value='{{ birthday_day }}' />
-        <input type='hidden' name='birthday_month' value='{{ birthday_month }}' />
-        <input type='hidden' name='birthday_year' value='{{ birthday_year }}' />
+        <input type='hidden' name='DOB' value='{{ birthday_day }}/{{ birthday_month }}/{{ birthday_year }}' />
         <input type='hidden' name='special_spacify' value='{{ special_spacify }}' />
         <input type='hidden' name='member_card' value='{{ member_card }}' />
-        <input type='hidden' name='day' value='{{ day }}' />
-        <input type='hidden' name='month' value='{{ month }}' />
-        <input type='hidden' name='year' value='{{ year }}' />
+        <input type='hidden' name='expiration_day' value='{{ expiration_day }}/{{ expiration_month }}/{{ expiration_year }}' />
 
+        {{ csrf_field() }}
+
+        <input type="submit" id="submit" class="next-button" value="ถัดไป" />
         </div>
-
     </form>
 
-    {{ csrf_field() }}
 {% endblock %}

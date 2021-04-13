@@ -86,7 +86,7 @@
         </div>
         <div class="form-group input-expiry" style="text-align: center">
             <label>วันหมดอายุหลังบัตรสเวนเซ่นส์การ์ด</label>
-            <select name="day" id="day" class="input" style="width: 31%">
+            <select name="expiration_day" id="day" class="input" style="width: 31%">
                 <option value="">วัน</option>
                 {% for i in 1..31 %}
                     {% if i < 10 %}
@@ -97,7 +97,7 @@
                 {% endfor %}
             </select>
 
-            <select name="month" id="month" class="input" style="width: 31%">
+            <select name="expiration_month" id="month" class="input" style="width: 31%">
                 <option value="">เดือน</option>
                 {% for i in 1..12 %}
                     {% if i < 10 %}
@@ -108,7 +108,7 @@
                 {% endfor %}
             </select>
 
-            <select name="year" id="year" class="input" style="width: 31%">
+            <select name="expiration_year" id="year" class="input" style="width: 31%">
                 <option value="">ปี</option>
                 {% for i in 2561..2462 %}
                     <option value="{{ i }}">{{ i }}</option>
@@ -118,19 +118,19 @@
         </div>
 
         <div class="form-group" style="margin-top: 20px;">
-            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" style="display: inline;" />
+            <input type="checkbox" id="confirm1" name="confirm1" value="" style="display: inline;" />
             <span style="font-size: 15px; font-weight: bold; color: #828282">ฉันได้อ่านและยอมรับ <a target="_blank" href="/th/terms-and-conditions"> ข้อกำหนดการใช้งาน </a>และ<a target="_blank" href="/th/privacy-policy"> นโยบายความเป็นส่วนตัว </a>ของสเวนเซ่นส์</span>
         </div>
         <div class="form-group" style="margin-top: 20px;">
-            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" style="display: inline;" />
+            <input type="checkbox" id="confirm2" name="confirm2" value="" style="display: inline;" />
             <span style="font-size: 15px; font-weight: bold; color: #828282">ฉันยินยอมรับข้อมูลข่าวสาร กิจกรรมส่งเสริมการขายต่างๆ จากสเวนเซ่นส์และ <a target="_blank" href="https://www.minor.com/th/affiliated-companies">บริษัทในเครือ</a> โดยเราจะเก็บข้อมูลของท่านไว้เป็นความลับ สามารถศึกษาเงื่อนไข/ข้อตกลง<a target="_blank" href="/th/privacy-policy"> นโยบายความเป็นส่วนตัว </a>เพิ่มเติมได้ที่เว็บไซต์ของบริษัทฯ</span>
         </div>
 
+        {{ csrf_field() }}
+
         <input type="submit" id="submit" class="next-button" value="ถัดไป" />
 
-
     </div>
-    {{ csrf_field() }}
 </form>
 
 {% endblock %}

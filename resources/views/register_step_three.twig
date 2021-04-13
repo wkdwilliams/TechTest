@@ -1,0 +1,43 @@
+{% extends "register.twig" %}
+
+{% block body %}
+
+    <div class="container">
+        <div style="color: red; text-align: center">ลงทะเบียนสมัครสมาชิกสเวนเซ่นส์</div>
+        <ul class="progressbar">
+            <li>ข้อมูลลูกค้า</li>
+            <li>ที่อยู่ปัจจุบัน</li>
+            <li class="active">ยืนยันข้อมูลทั้งหมด</li>
+        </ul>
+    </div>
+
+<div id="register-form" style="margin-top: 110px;">
+
+    <table>
+        {% for i in verify_info %}
+            <tr>
+                <td>{{ i[0] }}</td><td>{{ i[1]|replace({'\n':'<br>'})|raw }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <form action="/th/member/register/create" method="post">
+        <input type='hidden' name='address' value='{{ orig_info['address'] }}' />
+        <input type='hidden' name='name' value='{{ orig_info['name'] }}' />
+        <input type='hidden' name='last_name' value='{{ orig_info['last_name'] }}' />
+        <input type='hidden' name='email' value='{{ orig_info['email'] }}' />
+        <input type='hidden' name='password' value='{{ orig_info['password'] }}' />
+        <input type='hidden' name='mobile' value='{{ orig_info['mobile'] }}' />
+        <input type='hidden' name='DOB' value='{{ orig_info['DOB'] }}' />
+        <input type='hidden' name='special_spacify' value='{{ orig_info['special_spacify'] }}' />
+        <input type='hidden' name='member_card' value='{{ orig_info['member_card'] }}' />
+        <input type='hidden' name='expiration_day' value='{{ orig_info['expiration_day'] }}' />
+
+        {{ csrf_field() }}
+
+        <input type="submit" id="submit" class="next-button" value="ยืนยัน" />
+    </form>
+
+</div>
+
+{% endblock %}
