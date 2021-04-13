@@ -29,3 +29,4 @@ Route::get('/th/member/login', function () {
 Route::get('/th/member/register/1',  [RegisterController::class, 'stepOne']);
 Route::post('/th/member/register/2', [RegisterController::class, 'stepTwo']);
 Route::post('/th/member/register/3', [RegisterController::class, 'stepThree']);
+Route::post('/th/member/register/create', [RegisterController::class, 'create']);
