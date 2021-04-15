@@ -11,7 +11,7 @@
    ```
 3. (Optional) Set mysql host 
    ```sh
-   sudo echo "127.0.0.1" >> /etc/hosts
+   sudo echo "127.0.0.1     mysql" >> /etc/hosts
    ```
    Sometimes this is required to connect to the mysql container
 4. Install dependencies
