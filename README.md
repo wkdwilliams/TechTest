@@ -26,4 +26,11 @@
    ```
    php artisan migrate:fresh
    ```
+#### After installation, navigate to http://localhost.
 
+### Unit tests
+1. Run the unit test to ensure back-end registration is setup correctly
+   ```
+   php artisan test
+   ```
+   
