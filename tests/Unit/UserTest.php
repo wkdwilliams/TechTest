@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
 class UserTest extends \Tests\TestCase
 {
     /**
-     * A basic unit test example.
+     * Test the registration
      *
      * @return void
      */
@@ -39,4 +39,5 @@ class UserTest extends \Tests\TestCase
         ]);
 
     }
+
 }

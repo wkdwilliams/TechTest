@@ -56,7 +56,7 @@ class RegisterController extends Controller
             'first_name'        => $request->get('name'),
             'last_name'         => $request->get('last_name'),
             'email'             => $request->get('email'),
-            'password'          => $request->get('password'),
+            'password'          => $request->get('password'), // Storing password as plain text for now.
             'mobile'            => $request->get('mobile'),
             'DOB'               => $request->get('DOB'),
             'spacify'           => $request->get('special_spacify'),

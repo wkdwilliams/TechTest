@@ -10,8 +10,8 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="default">
         <meta name="apple-mobile-web-app-title" content="SWENSENS">
-        <link rel="apple-touch-icon" sizes="120x120" href="images/icon.ico">
-        <link rel="shortcut icon" sizes="48x48" href="images/icon.ico">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/icon.ico">
+        <link rel="shortcut icon" sizes="48x48" href="/images/icon.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1.0,
             maximum-scale=1.0, user-scalable=no">
         <meta name="theme-color" content="#0a0b0f">
@@ -20,10 +20,51 @@
         <meta property="og:title" content="หน้าแรก | SWENSENS">
         <meta property="og:image" content="/assets/images/SW_OG_1980x1080.png">
         <meta property="og:site_name" content="SWENSENS">
-        <script src="js/sweetalert.min.js"></script>
-        <script src="js/font-awesome.js"></script>
-        <link rel="stylesheet" href="dist/balloon.min.css%3Fv-1.css">
+        <script src="/js/sweetalert.min.js"></script>
+        <script src="/js/font-awesome.js"></script>
+        <link rel="stylesheet" href="/dist/balloon.min.css%3Fv-1.css">
+
         <style type="text/css">
+            .input{
+                color: #000;
+                padding: 15px;
+                width: 100%;
+                outline: none;
+                border: 1px solid #e4e4e4;
+                border-radius: 10px;
+                box-sizing: border-box;
+                box-shadow: none;
+                background-color: #fff;
+                position: relative;
+                transition: all .2s ease-out;
+
+                height: 45px;
+                margin: 7px 0 0 0;
+            }
+
+            label{
+                display: block;
+                margin: 0;
+            }
+
+            #login-form{
+                margin: 200px 34% 0 34%;
+            }
+
+            .form-group label, .input-group label {
+                color: #828282;
+                font-weight: bold;
+                line-height: 1;
+                text-align: left;
+                display: block;
+                margin: 15px 0 3px;
+            }
+
+            .form-error-msg{
+                color: red;
+                padding-left: 5px;
+                font-size: 12px;
+            }
             html,
             body {
                 padding: 0;
@@ -86,19 +127,19 @@
 }
         </style>
 
-        <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-        <link rel="stylesheet" href="css/selectize.bootstrap3.css">
+        <link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/selectize.bootstrap3.css">
 
-        <script src="bootstrap/jquery.min.js"></script>
-        <script src="bootstrap/bootstrap.min.js"></script>
-        <script src="js/slick.js%3Fv=1618237711"></script>
-        <script src="js/selectize.min.js%3Fv=1618237711"></script>
-        <link rel="stylesheet" href="dist/common.a.css%3Fv=1618237711.css">
-        <link rel="stylesheet" href="dist/time-picker.css%3Fv=1618237711.css">
-        <link rel="stylesheet" href="css/style.css%3Fv=1618237711.css">
-        <link rel="stylesheet" href="css/slick-theme.css%3Fv=1618237711.css">
-        <link rel="stylesheet" href="css/slick.css%3Fv=1618237711.css">
-        <script src="datetimepicker/moment.min.js%3Fv=1618237711"></script>
+        <script src="/bootstrap/jquery.min.js"></script>
+        <script src="/bootstrap/bootstrap.min.js"></script>
+        <script src="/js/slick.js%3Fv=1618237711"></script>
+        <script src="/js/selectize.min.js%3Fv=1618237711"></script>
+        <link rel="stylesheet" href="/dist/common.a.css%3Fv=1618237711.css">
+        <link rel="stylesheet" href="/dist/time-picker.css%3Fv=1618237711.css">
+        <link rel="stylesheet" href="/css/style.css%3Fv=1618237711.css">
+        <link rel="stylesheet" href="/css/slick-theme.css%3Fv=1618237711.css">
+        <link rel="stylesheet" href="/css/slick.css%3Fv=1618237711.css">
+        <script src="/datetimepicker/moment.min.js%3Fv=1618237711"></script>
         <style type="text/css">
             .notifications {
                 display: block;
@@ -1600,6 +1641,13 @@
                 text-align: center;
                 padding: 10px
             }
+
+            a{
+                color: #e20718;
+            }
+            a:hover{
+                color: #e20718;
+            }
         </style>
         <script type="text/javascript">
             window.fbAsyncInit = function() {
@@ -1894,21 +1942,27 @@
                             </div>
                             <div class="logo">
                                 <a href="https://www.swensens1112.com/">
-                                    <img src="images/logo.png" class="nav-img">
+                                    <img src="/images/logo.png" class="nav-img">
                                 </a>
                             </div>
                             <div class="header-r">
                                 <div class="account hidden-sm">
                                     <a
-                                        href="https://www.swensens1112.com/th/member/login"
+                                        href="/th/member/login"
                                         id="login_" class="login-menu
                                         top_margin"><img
-                                            src="brandsite/icon/iconregister.png"
-                                            class="icon_footer">เข้าสู่ระบบ</a>
+                                            src="/brandsite/icon/iconregister.png"
+                                            class="icon_footer">
+                                        {% if user %}
+                                            {{ user }}
+                                        {% else %}
+                                            เข้าสู่ระบบ
+                                        {% endif %}
+                                    </a>
                                 </div>
                                 <div class="bag hidden-xs" style="margin-right:
                                     35px;">
-                                    <img src="brandsite/icon/searchicon1.png"
+                                    <img src="/brandsite/icon/searchicon1.png"
                                         id="icon_search" class="icon_footer"
                                         data-toggle="collapse"
                                         data-parent="#accordion"
@@ -1920,7 +1974,7 @@
                                     2px;">
                                     <a
                                         href="https://www.swensens1112.com/th/member/login">
-                                        <img src="icon/SWS_icon01.png"
+                                        <img src="/icon/SWS_icon01.png"
                                             class="icon_footer" style="cursor:
                                             pointer;">
                                     </a>
@@ -1929,7 +1983,7 @@
                                     <a
                                         href="https://www.swensens1112.com/th/cart"
                                         class="must_login">
-                                        <img src="icon/iconbag1.png"
+                                        <img src="/icon/iconbag1.png"
                                             class="icon_footer">
                                     </a>
                                 </div>
@@ -1984,7 +2038,7 @@
                                 <a
                                     href="https://www.swensens1112.com/th/swensens-card"
                                     lang="th"><img
-                                        src="icon/swensens_menu_member_card_40x40.png"
+                                        src="/icon/swensens_menu_member_card_40x40.png"
                                         class="icon_nav">สมาชิกสเวนเซ่นส์การ์ด</a>
                             </li>
                         </ul>
@@ -1996,7 +2050,7 @@
                                 <div class="sidenav-header">
                                     <div class="nav-slide-logo text-center">
                                         <a href="https://www.swensens1112.com/"><img
-                                                src="images/logo.png" alt=""></a>
+                                                src="/images/logo.png" alt=""></a>
                                     </div>
                                     <div class="sidenav-close">
                                         <button type="button"
@@ -2012,21 +2066,21 @@
                                                 <a
                                                     href="https://www.swensens1112.com/th/mobile/search"
                                                     class=""><img
-                                                        src="icon/swensens_menu_search.png"
+                                                        src="/icon/swensens_menu_search.png"
                                                         class="icon_footer">ค้นหา</a>
                                             </li>
                                             <li>
                                                 <a
                                                     href="https://www.swensens1112.com/th/product/cake"
                                                     class=""><img
-                                                        src="icon/swensens_menu_cake.png"
+                                                        src="/icon/swensens_menu_cake.png"
                                                         class="icon_footer">ไอศกรีมเค้ก</a>
                                             </li>
                                             <li>
                                                 <a
                                                     href="https://www.swensens1112.com/th/product/icecream"
                                                     class=""><img
-                                                        src="icon/swensens_menu_quart.png"
+                                                        src="/icon/swensens_menu_quart.png"
                                                         class="icon_footer">ไอศกรีมควอท
                                                     (450g.)</a>
                                             </li>
@@ -2034,7 +2088,7 @@
                                                 <a
                                                     href="https://www.swensens1112.com/th/product/ice-cream-pint"
                                                     class=""><img
-                                                        src="icon/swensens_menu_quart.png"
+                                                        src="/icon/swensens_menu_quart.png"
                                                         class="icon_footer">ไอศกรีมมินิ
                                                     ควอท (250g.)</a>
                                             </li>
@@ -2042,7 +2096,7 @@
                                                 <a
                                                     href="https://www.swensens1112.com/th/product/sundae-set"
                                                     class=""><img
-                                                        src="icon/swensens_menu_takeaway.png"
+                                                        src="/icon/swensens_menu_takeaway.png"
                                                         class="icon_footer">ซันเด
                                                     เซต</a>
                                             </li>
@@ -2050,35 +2104,35 @@
                                                 <a
                                                     href="https://www.swensens1112.com/th/product/scoop"
                                                     class=""><img
-                                                        src="icon/swensens_menu_scoop.png"
+                                                        src="/icon/swensens_menu_scoop.png"
                                                         class="icon_footer">ไอศกรีมสกู๊ป</a>
                                             </li>
                                             <li>
                                                 <a
                                                     href="https://www.swensens1112.com/th/product/Topping"
                                                     class=""><img
-                                                        src="icon/swensens_menu_topping.png"
+                                                        src="/icon/swensens_menu_topping.png"
                                                         class="icon_footer">ท้อปปิ้ง</a>
                                             </li>
                                             <li>
                                                 <a
                                                     href="https://www.swensens1112.com/th/product/icecream-bar"
                                                     class=""><img
-                                                        src="icon/swensens_icecream_bar.png"
+                                                        src="/icon/swensens_icecream_bar.png"
                                                         class="icon_footer">ไอศกรีมบาร์</a>
                                             </li>
                                             <li>
                                                 <a
                                                     href="https://www.swensens1112.com/th/product/Vouchers"
                                                     class=""><img
-                                                        src="icon/swensens_menu_gift_voucher.png"
+                                                        src="/icon/swensens_menu_gift_voucher.png"
                                                         class="icon_footer">บัตรกำนัลเงินสด</a>
                                             </li>
                                             <li>
                                                 <a
                                                     href="https://www.swensens1112.com/th/swensens-card"
                                                     class=""><img
-                                                        src="icon/swensens_menu_member_card.png"
+                                                        src="/icon/swensens_menu_member_card.png"
                                                         class="icon_footer">สมาชิกสเวนเซ่นส์การ์ด</a>
                                             </li>
                                             <li>
@@ -2092,21 +2146,21 @@
                                                 <a
                                                     href="https://www.swensens1112.com/th/about-us"
                                                     class=""><img
-                                                        src="icon/swensens_menu_aboutus.png"
+                                                        src="/icon/swensens_menu_aboutus.png"
                                                         class="icon_footer">เกี่ยวกับเรา</a>
                                             </li>
                                             <li>
                                                 <a
                                                     href="https://www.swensens1112.com/th/brandsite/shop/search"
                                                     class=""><img
-                                                        src="icon/swensens_menu_finder.png"
+                                                        src="/icon/swensens_menu_finder.png"
                                                         class="icon_footer">ค้นหาร้านใกล้คุณ</a>
                                             </li>
                                             <li>
                                                 <a
                                                     href="https://www.swensens1112.com/th/member/login"
                                                     id="login_" class=""><img
-                                                        src="icon/swensens_menu_login.png"
+                                                        src="/icon/swensens_menu_login.png"
                                                         class="icon_footer">เข้าสู่ระบบ</a>
                                             </li>
                                         </ul>
@@ -2142,7 +2196,7 @@
                         <input type="text" class="form-control search"
                             id="text_search" name="search" placeholder="ค้นหาจาก
                             ชื่อสินค้า, ประเภทสินค้า, อื่นๆ">
-                        <img src="icon/swensens_icon001.png" class="icon_search"class="icon_footer">
+                        <img src="/icon/swensens_icon001.png" class="icon_search"class="icon_footer">
                         <div class="" style="position: relative;">
                             <ul id="tab_search">
                             </ul>
@@ -2169,14 +2223,14 @@
                         <div class="credit-card">
                             <ul>
                                 <li>
-                                    <img src="assets/images/visa.svg" alt="">
+                                    <img src="/assets/images/visa.svg" alt="">
                                 </li>
                                 <li>
-                                    <img src="assets/images/mastercard.svg"
+                                    <img src="/assets/images/mastercard.svg"
                                         alt="">
                                 </li>
                                 <li>
-                                    <img src="assets/images/jcb.svg" alt="">
+                                    <img src="/assets/images/jcb.svg" alt="">
                                 </li>
                             </ul>
                         </div>
@@ -2197,7 +2251,7 @@
                                                 <a href="tel:1112">
                                                     <span>
                                                         <img
-                                                            src="brandsite/images/call.png"
+                                                            src="/brandsite/images/call.png"
                                                             class="icon_footer"><span
                                                             class="heading">
                                                         </span>
@@ -2210,7 +2264,7 @@
                                                     href="https://www.swensens1112.com/th/contactus">
                                                     <span>
                                                         <img
-                                                            src="images/icon_mail.png"
+                                                            src="/images/icon_mail.png"
                                                             class="icon_footer"><span
                                                             class="heading">
                                                         </span>
@@ -2225,7 +2279,7 @@
                                                     href="https://www.facebook.com/weloveswensens/"
                                                     target="_blank">
                                                     <img
-                                                        src="brandsite/icon/facebook.png"
+                                                        src="/brandsite/icon/facebook.png"
                                                         class="icon_footer">
                                                 </a>
                                             </li>
@@ -2234,7 +2288,7 @@
                                                     href="https://www.instagram.com/we_love_swensens/"
                                                     target="_blank">
                                                     <img
-                                                        src="brandsite/icon/instragram.png"
+                                                        src="/brandsite/icon/instragram.png"
                                                         class="icon_footer">
                                                 </a>
                                             </li>
@@ -2243,7 +2297,7 @@
                                                     href="https://www.youtube.com/channel/UCZg-uMHcpiqr3z1qiJCurIQ/videos"
                                                     target="_blank">
                                                     <img
-                                                        src="brandsite/icon/youtube.png"
+                                                        src="/brandsite/icon/youtube.png"
                                                         class="icon_footer">
                                                 </a>
                                             </li>
@@ -2251,7 +2305,7 @@
                                                 <a href="line://ti/p/@qic0396o"
                                                     target="_blank">
                                                     <img
-                                                        src="brandsite/icon/footernew.png"
+                                                        src="/brandsite/icon/footernew.png"
                                                         class="icon_footer">
                                                 </a>
                                             </li>
@@ -2265,7 +2319,7 @@
                                                 <li>
                                                     <a href="tel:1112">
                                                         <img
-                                                            src="brandsite/images/call.png"
+                                                            src="/brandsite/images/call.png"
                                                             class="icon_footer">
                                                     </a>
                                                 </li>
@@ -2273,7 +2327,7 @@
                                                     <a
                                                         href="https://www.swensens1112.com/th/contactus">
                                                         <img
-                                                            src="images/icon_mail.png"
+                                                            src="/images/icon_mail.png"
                                                             class="icon_footer">
                                                     </a>
                                                 </li>
@@ -2292,7 +2346,7 @@
                                                         href="https://www.facebook.com/weloveswensens/"
                                                         target="_blank">
                                                         <img
-                                                            src="brandsite/icon/facebook.png"
+                                                            src="/brandsite/icon/facebook.png"
                                                             class="icon_footer">
                                                     </a>
                                                 </li>
@@ -2301,7 +2355,7 @@
                                                         href="https://www.instagram.com/we_love_swensens/"
                                                         target="_blank">
                                                         <img
-                                                            src="brandsite/icon/instragram.png"
+                                                            src="/brandsite/icon/instragram.png"
                                                             class="icon_footer">
                                                     </a>
                                                 </li>
@@ -2310,7 +2364,7 @@
                                                         href="https://www.youtube.com/channel/UCZg-uMHcpiqr3z1qiJCurIQ/videos"
                                                         target="_blank">
                                                         <img
-                                                            src="brandsite/icon/youtube.png"
+                                                            src="/brandsite/icon/youtube.png"
                                                             class="icon_footer">
                                                     </a>
                                                 </li>
@@ -2319,7 +2373,7 @@
                                                         href="line://ti/p/@qic0396o"
                                                         target="_blank">
                                                         <img
-                                                            src="brandsite/icon/footernew.png"
+                                                            src="/brandsite/icon/footernew.png"
                                                             class="icon_footer">
                                                     </a>
                                                 </li>
@@ -2329,7 +2383,7 @@
                                 </div>
                                 <div class="delivery-available hidden-xs
                                     hidden-sm">
-                                    <img src="icon/swensens_menu2_cs6-33.png"
+                                    <img src="/icon/swensens_menu2_cs6-33.png"
                                         class="clockicon_footer">จัดส่งสินค้าเวลา
                                     10:00 น. - 21:00
                                     น.&nbsp;รับออเดอร์สุดท้ายเวลา 20:00 น.
@@ -2338,7 +2392,7 @@
                                     visible-sm col-xs-12 col-sm-12">
                                     <div class="timeopen">
                                         <img
-                                            src="icon/swensens_menu2_cs6-33.png"
+                                            src="/icon/swensens_menu2_cs6-33.png"
                                             class="icon_footer">
                                         จัดส่งสินค้าเวลา 10:00 น. - 21:00 น.
                                         <span class="timeshop" style="display:

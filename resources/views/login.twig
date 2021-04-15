@@ -1,43 +1,23 @@
 {% extends "base.twig" %}
 
 {% block body %}
-    <div class="content-wrap">
-        <div class="container">
-            <div class="page page-product-category">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 col-sm-12">
-                        <div class="" role="document">
-                            <div class="">
-                                <h2 class="color_red text-center"> เข้าสู่ระบบ </h2>
-                            </div>
-                            <div class="text-center">
-                                <div class="popup-content log_form" style="">
-                                    <form action="https://www.swensens1112.com/th/login" method="post">
-                                        <input type="hidden" name="_token" value="nwOQzVjjkoKdeQQp5XGhGYqplPNY4aTe8WkQBZ5P">
-                                        <input type="hidden" name="old_url" value="https://www.swensens1112.com/th">
-                                        <div class="content">
-                                            <div class="input-group input-username has-icon">
-                                                <div class="wrapper-input">
-                                                    <input type="text" name="identity" id="identity" required="" class="input" value="" placeholder="อีเมล หรือ ชื่อผู้ใช้">
-                                                </div>
-                                            </div>
-                                            <div class="input-group input-password has-icon">
-                                                <div class="wrapper-input">
-                                                    <input type="password" name="password" required="" placeholder="รหัสผ่าน" class="input">
-                                                </div>
-                                                <input type="hidden" name="session_id" id="session_id" value="SDm0cSxz3QQgGMzYd2KlES1Ep390hYyOGRM3Vnhp" />
 
-                                            </div>
-                                            <button type="submit" class="next-button btn-block" style="width: 100%">เข้าสู่ระบบด้วยอีเมล</button>
-
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div id="login-form" style="margin-top: 30px; text-align: center">
+    <form method="post" action="/th/member/login/auth">
+    <span style="font-size: 1.3em; color: #e20718">เข้าสู่ระบบ</span>
+    <div class="form-group">
+        <input type="text" class="input input-light" name="email" id="email" placeholder="อีเมล หรือ ชื่อผู้ใช้" value="" style="width: 400px;">
     </div>
+    <div class="form-group">
+        <input type="password" class="input input-light" name="password" id="password" placeholder="รหัสผ่าน" value="" style="width: 400px;">
+    </div>
+    <div class="form-group">
+        <input type="submit" id="submit" class="next-button" value="ถัดไป" style="width: 400px;" />
+    </div>
+
+    <span>หากคุณยังไม่ได้เป็นสมาชิกคลิกเลย > <a href="/th/member/register">สมัครสมาชิกใหม่</a></span>
+        {{ csrf_field() }}
+    </form>
+</div>
+
 {% endblock %}
