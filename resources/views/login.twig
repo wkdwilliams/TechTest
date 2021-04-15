@@ -15,6 +15,12 @@
         <input type="submit" id="submit" class="next-button" value="ถัดไป" style="width: 400px;" />
     </div>
 
+        {% if error %}
+        <div>
+            <p style="color: red">User name หรือ password ผิดพลาด</p>
+        </div>
+        {% endif %}
+
     <span>หากคุณยังไม่ได้เป็นสมาชิกคลิกเลย > <a href="/th/member/register">สมัครสมาชิกใหม่</a></span>
         {{ csrf_field() }}
     </form>

@@ -10,7 +10,7 @@ class LoginController extends Controller
 {
 
     public function login(Request $request){
-        return $this->render('login');
+        return $this->render('login', ['error' => $request->get('err')]);
     }
 
     public function authenticate(Request $request){
